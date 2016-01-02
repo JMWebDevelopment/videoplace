@@ -17,7 +17,6 @@
 			    
 		    	<header>
 		    		<h1 class="page-title"><?php the_archive_title();?></h1>
-					<?php the_archive_description('<div class="taxonomy-description">', '</div>');?>
 		    	</header>
 		
 		    	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -43,7 +42,7 @@
 				    
 				<?php endwhile; ?>	
 
-					<?php theme_slug_page_navi(); ?>
+					<?php videoplace_page_navi(); ?>
 						
 				<?php endif; ?>
 		

@@ -48,6 +48,29 @@ span.amp {
 CSS3 GRADIENTS.
 *********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
+.page-post .article-header {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #fefefe;
+  margin-bottom: 15px;
+}
+.page-post .article-header .flex-video {
+  padding-bottom: 56%;
+  margin: 0;
+}
+.page-post .entry-content {
+  background-color: rgba(216, 216, 216, 0.3);
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+.page-post .entry-content .page-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 35px;
+  font-weight: 400;
+  color: #fefefe;
+  text-transform: none;
+  text-align: center;
+}
+
 /**
 ***************** A. 404 ************************ 
 */

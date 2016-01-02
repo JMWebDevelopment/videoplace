@@ -9,6 +9,28 @@
 @import "mixins";
 @import "settings";
 
+.page-post {
+  .article-header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid $white;
+    margin-bottom: 15px;
+    .flex-video {
+      padding-bottom: 56%;
+      margin: 0;
+    }
+  }
+  .entry-content {
+    background-color: rgba($grey, .30);
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    .page-title {
+      @include robotoSlab(35px, 400, $white, none);
+      text-align: center;
+    }
+  }
+}
+
+
 /**
 ***************** A. 404 ************************ 
 */

@@ -206,6 +206,65 @@ register_nav_menus(
  ******************** V. Single Post Functions *********************************
  */
 /**
+ * Returns the text of the post without the first embedded video, which has already been pulled out for display.
+ *
+ * @param $post_id
+ * @return string, the content without the first embedded video
+ */
+function videoplace_get_content($post_id) {
+
+	$post = get_post($post_id);
+	$content = do_shortcode( apply_filters( 'the_content', $post->post_content ) );
+	$embeds = get_media_embedded_in_content( $content );
+
+	if( !empty($embeds) ) {
+		//check what is the first embed containg video tag, youtube or vimeo
+		foreach( $embeds as $embed ) {
+			if( strpos( $embed, 'video' ) || strpos( $embed, 'youtube' ) || strpos( $embed, 'vimeo' ) ) {
+				$content = str_replace( $embed, "", $content );
+				return $content;
+			}
+		}
+
+	} else {
+		//No video embedded found
+		return $content;
+	}
+
+}
+function videoplace_related_posts() {
+	global $post;
+	$tags = wp_get_post_tags( $post->ID );
+	if($tags) {
+		foreach( $tags as $tag ) {
+			$tag_arr = $tag->slug . ',';
+		}
+		$args = array(
+				'tag' => $tag_arr,
+				'numberposts' => 3, /* you can change this to show more */
+				'post__not_in' => array($post->ID)
+		);
+		$related_posts = get_posts( $args );
+		if($related_posts) {
+			echo'<section class="related-posts">';
+			echo '<h4>Related Videos</h4>';
+			foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('video-post'); ?>>
+						<h5 class="post-category"><?php $cats = get_the_category(); echo $cats[0]->name; ?></h5>
+						<?php echo videoplace_get_first_embed_media($post->ID); ?>
+						<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<div class="post-details clearfix">
+							<?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?>
+							<h4 class="post-detail"><?php echo __('Posted by ', 'videoplace') . get_the_author_link() . __(' on ', 'videoplace') . get_the_date('F j, Y'); ?></h4>
+						</div>
+						<a href="<?php the_permalink(); ?>" class="button white"><?php _e('View More Info', 'videoplace'); ?></a>
+					</article>
+			<?php endforeach; }
+	}
+	wp_reset_postdata();
+	echo '</section>';
+}
+/**
  ******************** VI. Archive Functions *********************************
  */
 /**
@@ -274,6 +333,35 @@ function videoplace_new_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'videoplace_new_excerpt_more');
 /**
+ * Change the archive page title text
+ */
+function videoplace_archive_title($title) {
+	if (is_day()) {
+		$title = get_the_time('F j, Y');
+	}
+	else if (is_month()) {
+		$title = get_the_time('F Y');
+	}
+	else if (is_year()) {
+		$title = get_the_time('Y');
+	}
+	else if (is_category()) {
+		$title = single_cat_title('', false);
+	}
+	else if (is_search()) {
+		$title = __('Search results for ', 'nuovo') . get_search_query();
+	}
+	else if (is_tag()) {
+		$title = single_tag_title('', false);
+	}
+	else {
+		$page = get_query_var('paged');
+		$title = __('Page ', 'nuovo') . $page;
+	}
+	return $title;
+}
+add_filter( 'get_the_archive_title', 'videoplace_archive_title');
+/**
  ******************** VII. Author Functions *********************************
  */
 /**
@@ -293,9 +381,8 @@ function videoplace_comments($comment, $args, $depth) {
 					// create variable
 					$bgauthemail = get_comment_author_email();
 					?>
-					<?php printf(__('%s', 'videoplace'), get_comment_author_link()) ?> on
-					<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__(' F jS, Y - g:ia', 'theme-slug')); ?> </a></time>
-					<?php edit_comment_link(__('(Edit)', 'videoplace'),'  ','') ?>
+					<h3><?php printf(__('%s', 'videoplace'), get_comment_author_link()) ?></h3>
+					<h5><time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__(' F jS, Y - g:ia', 'theme-slug')); ?> </a></time> <?php edit_comment_link(__('(Edit)', 'videoplace'),'  ','') ?></h5>
 				</header>
 				<?php if ($comment->comment_approved == '0') : ?>
 					<div class="alert alert-info">

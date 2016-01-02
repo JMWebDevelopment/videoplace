@@ -9,6 +9,112 @@
 @import "mixins";
 @import "settings";
 
+.video-top {
+  padding-bottom: 15px;
+  border-bottom: 1px solid $white;
+  margin-bottom: 15px;
+  .video {
+    padding-left: 0;
+    .flex-video {
+      padding-bottom: 56%;
+      margin: 0;
+    }
+  }
+  .article-details {
+    padding-right: 0;
+    .article-header {
+      background-color: rgba($grey, .30);
+      height: 439.594px;
+      padding: 10px 15px;
+      .entry-title {
+        @include robotoSlab(30px, 400, $white, none);
+        margin: 0 0 5px 0;
+      }
+      .post-details {
+        border-bottom: 1px solid $white;
+        padding-bottom: 3px;
+        img {
+          border-radius: 50px;
+          float: left;
+          margin-right: 10px;
+        }
+        .post-detail {
+          @include roboto(20px, 300, $white, none);
+          margin-top: -2px;
+        }
+      }
+      .the-tag {
+        border: 1px solid $white;
+        border-radius: 2px;
+        padding: 3px 5px;
+        margin-right: 3px;
+        @include roboto(14px, 300, $white, none);
+        a {
+          color: $white;
+        }
+        &:hover {
+          background-color: $white;
+          a {
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
+.post-more {
+  padding-left: 0;
+  .entry-content {
+    background-color: rgba($dark-grey, .30);
+    padding: 10px 15px;
+    margin-bottom: 15px;
+  }
+}
+.related-posts {
+  background-color: rgba($dark-grey, .30);
+  padding: 10px 10px;
+  h4 {
+    @include robotoSlab(30px, 400, $white, uppercase);
+    border-bottom: 1px solid $white;
+    margin-left: 10px;
+    margin-bottom: 10px;
+  }
+  .video-post {
+    margin-bottom: 10px;
+    .flex-video {
+      padding-bottom: 56%;
+      margin: 0 -10px 5px -10px;
+    }
+    .post-category {
+      @include roboto(18px, 300, $white, uppercase);
+    }
+    .title {
+      @include robotoSlab(30px, 400, $white, none);
+      margin-left: 0;
+      a {
+        color: $white;
+      }
+    }
+    .post-details {
+      padding-bottom: 3px;
+      img {
+        border-radius: 50px;
+        float: left;
+        margin-right: 10px;
+      }
+      .post-detail {
+        @include roboto(20px, 300, $white, none);
+        margin-top: 10px;
+        border-bottom: 0;
+      }
+    }
+    .button.white {
+      font-size: 22px;
+      width: 100%;
+    }
+  }
+}
+
 @media #{$small-up} { }
 @media #{$small-only} { }
 

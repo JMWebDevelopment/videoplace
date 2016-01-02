@@ -5567,7 +5567,7 @@ textarea:focus,
 }
 
 a, a:link, a:visited, a:hover {
-  color: #6E6E6E;
+  color: #D8D8D8;
   text-decoration: none;
 }
 
@@ -5576,7 +5576,7 @@ a img {
 }
 
 a:hover {
-  color: #333;
+  color: #fefefe;
 }
 
 p {
@@ -6521,6 +6521,142 @@ span.amp {
 CSS3 GRADIENTS.
 *********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
+.video-top {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #fefefe;
+  margin-bottom: 15px;
+}
+.video-top .video {
+  padding-left: 0;
+}
+.video-top .video .flex-video {
+  padding-bottom: 56%;
+  margin: 0;
+}
+.video-top .article-details {
+  padding-right: 0;
+}
+.video-top .article-details .article-header {
+  background-color: rgba(216, 216, 216, 0.3);
+  height: 439.594px;
+  padding: 10px 15px;
+}
+.video-top .article-details .article-header .entry-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #fefefe;
+  text-transform: none;
+  margin: 0 0 5px 0;
+}
+.video-top .article-details .article-header .post-details {
+  border-bottom: 1px solid #fefefe;
+  padding-bottom: 3px;
+}
+.video-top .article-details .article-header .post-details img {
+  border-radius: 50px;
+  float: left;
+  margin-right: 10px;
+}
+.video-top .article-details .article-header .post-details .post-detail {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: none;
+  margin-top: -2px;
+}
+.video-top .article-details .article-header .the-tag {
+  border: 1px solid #fefefe;
+  border-radius: 2px;
+  padding: 3px 5px;
+  margin-right: 3px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: none;
+}
+.video-top .article-details .article-header .the-tag a {
+  color: #fefefe;
+}
+.video-top .article-details .article-header .the-tag:hover {
+  background-color: #fefefe;
+}
+.video-top .article-details .article-header .the-tag:hover a {
+  color: #0a0a0a;
+}
+
+.post-more {
+  padding-left: 0;
+}
+.post-more .entry-content {
+  background-color: rgba(110, 110, 110, 0.3);
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+
+.related-posts {
+  background-color: rgba(110, 110, 110, 0.3);
+  padding: 10px 10px;
+}
+.related-posts h4 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #fefefe;
+  text-transform: uppercase;
+  border-bottom: 1px solid #fefefe;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.related-posts .video-post {
+  margin-bottom: 10px;
+}
+.related-posts .video-post .flex-video {
+  padding-bottom: 56%;
+  margin: 0 -10px 5px -10px;
+}
+.related-posts .video-post .post-category {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: uppercase;
+}
+.related-posts .video-post .title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #fefefe;
+  text-transform: none;
+  margin-left: 0;
+}
+.related-posts .video-post .title a {
+  color: #fefefe;
+}
+.related-posts .video-post .post-details {
+  padding-bottom: 3px;
+}
+.related-posts .video-post .post-details img {
+  border-radius: 50px;
+  float: left;
+  margin-right: 10px;
+}
+.related-posts .video-post .post-details .post-detail {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: none;
+  margin-top: 10px;
+  border-bottom: 0;
+}
+.related-posts .video-post .button.white {
+  font-size: 22px;
+  width: 100%;
+}
+
 /**
 ***************** V. Comments ************************
 */
@@ -6574,6 +6710,73 @@ span.amp {
 CSS3 GRADIENTS.
 *********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
+.comments-area {
+  background-color: rgba(110, 110, 110, 0.3);
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+.comments-area .comments-title {
+  border-bottom: 1px solid #fefefe;
+}
+.comments-area .comment {
+  border-bottom: 1px solid #fefefe;
+}
+.comments-area .comment img {
+  border-radius: 75px;
+}
+.comments-area .comment h3 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #fefefe;
+  text-transform: none;
+}
+.comments-area .comment h3 a {
+  color: #fefefe;
+}
+.comments-area .comment h5 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: none;
+}
+.comments-area .comment h5 a {
+  color: #fefefe;
+}
+.comments-area .comment .comment-reply-link {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: none;
+  border: 2px solid #fefefe;
+  border-radius: 2px;
+  color: #fefefe;
+  padding: 3px 8px;
+}
+.comments-area .comment .comment-reply-link a {
+  color: #fefefe;
+}
+.comments-area .comment .comment-reply-link:hover {
+  background-color: #fefefe;
+  color: #0a0a0a;
+}
+.comments-area .comment label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: none;
+}
+.comments-area label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: none;
+}
+
 /**
 ***************** VI. Index ************************
 */
@@ -6682,6 +6885,29 @@ span.amp {
 CSS3 GRADIENTS.
 *********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
+.page-post .article-header {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #fefefe;
+  margin-bottom: 15px;
+}
+.page-post .article-header .flex-video {
+  padding-bottom: 56%;
+  margin: 0;
+}
+.page-post .entry-content {
+  background-color: rgba(216, 216, 216, 0.3);
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+.page-post .entry-content .page-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 35px;
+  font-weight: 400;
+  color: #fefefe;
+  text-transform: none;
+  text-align: center;
+}
+
 /**
 ***************** A. 404 ************************ 
 */

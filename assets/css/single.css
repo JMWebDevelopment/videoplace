@@ -48,3 +48,138 @@ span.amp {
 CSS3 GRADIENTS.
 *********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
+.video-top {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #fefefe;
+  margin-bottom: 15px;
+}
+.video-top .video {
+  padding-left: 0;
+}
+.video-top .video .flex-video {
+  padding-bottom: 56%;
+  margin: 0;
+}
+.video-top .article-details {
+  padding-right: 0;
+}
+.video-top .article-details .article-header {
+  background-color: rgba(216, 216, 216, 0.3);
+  height: 439.594px;
+  padding: 10px 15px;
+}
+.video-top .article-details .article-header .entry-title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #fefefe;
+  text-transform: none;
+  margin: 0 0 5px 0;
+}
+.video-top .article-details .article-header .post-details {
+  border-bottom: 1px solid #fefefe;
+  padding-bottom: 3px;
+}
+.video-top .article-details .article-header .post-details img {
+  border-radius: 50px;
+  float: left;
+  margin-right: 10px;
+}
+.video-top .article-details .article-header .post-details .post-detail {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: none;
+  margin-top: -2px;
+}
+.video-top .article-details .article-header .the-tag {
+  border: 1px solid #fefefe;
+  border-radius: 2px;
+  padding: 3px 5px;
+  margin-right: 3px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: none;
+}
+.video-top .article-details .article-header .the-tag a {
+  color: #fefefe;
+}
+.video-top .article-details .article-header .the-tag:hover {
+  background-color: #fefefe;
+}
+.video-top .article-details .article-header .the-tag:hover a {
+  color: #0a0a0a;
+}
+
+.post-more {
+  padding-left: 0;
+}
+.post-more .entry-content {
+  background-color: rgba(110, 110, 110, 0.3);
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+
+.related-posts {
+  background-color: rgba(110, 110, 110, 0.3);
+  padding: 10px 10px;
+}
+.related-posts h4 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #fefefe;
+  text-transform: uppercase;
+  border-bottom: 1px solid #fefefe;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.related-posts .video-post {
+  margin-bottom: 10px;
+}
+.related-posts .video-post .flex-video {
+  padding-bottom: 56%;
+  margin: 0 -10px 5px -10px;
+}
+.related-posts .video-post .post-category {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: uppercase;
+}
+.related-posts .video-post .title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #fefefe;
+  text-transform: none;
+  margin-left: 0;
+}
+.related-posts .video-post .title a {
+  color: #fefefe;
+}
+.related-posts .video-post .post-details {
+  padding-bottom: 3px;
+}
+.related-posts .video-post .post-details img {
+  border-radius: 50px;
+  float: left;
+  margin-right: 10px;
+}
+.related-posts .video-post .post-details .post-detail {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: none;
+  margin-top: 10px;
+  border-bottom: 0;
+}
+.related-posts .video-post .button.white {
+  font-size: 22px;
+  width: 100%;
+}

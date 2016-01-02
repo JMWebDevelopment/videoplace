@@ -313,7 +313,7 @@ textarea:focus,
 }
 
 a, a:link, a:visited, a:hover {
-  color: #6E6E6E;
+  color: #D8D8D8;
   text-decoration: none;
 }
 
@@ -322,7 +322,7 @@ a img {
 }
 
 a:hover {
-  color: #333;
+  color: #fefefe;
 }
 
 p {
