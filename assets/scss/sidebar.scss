@@ -12,3 +12,34 @@
 /**
 ***************** A. Widgets ************************ 
 */
+.sidebar {
+  padding-right: 0;
+  .widget {
+    background-color: rgba($grey, .30);
+    padding: 10px 5px;
+    margin-bottom: 15px;
+    .widgettitle {
+      @include roboto(26px, 300, $white, uppercase);
+      text-align: center;
+      border-bottom: 1px solid $white;
+    }
+    a {
+      color: $grey;
+    }
+  }
+}
+
+@media #{$small-up} { }
+@media #{$small-only} { }
+
+@media #{$medium-up} { }
+@media #{$medium-only} { }
+
+@media #{$large-up} { }
+@media #{$large-only} { }
+
+@media #{$xlarge-up} { }
+@media #{$xlarge-only} { }
+
+@media #{$xxlarge-up} { }
+@media #{$xxlarge-only} { }

@@ -49,15 +49,63 @@ CSS3 GRADIENTS.
 *********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
 .footer {
-  background-color: #252525;
-  color: #ffffff;
+  background-color: #0a0a0a;
+  padding: 20px 0;
+}
+.footer .footer-info {
   text-align: center;
 }
-
-.footer a, .footer a:link, .footer a:visited {
-  color: #ffffff;
+.footer .footer-info img {
+  width: 40%;
+  height: auto;
+  margin-bottom: 10px;
 }
-
-.footer a:hover {
-  color: #000000;
+.footer .footer-info h3 {
+  font-size: 20px;
+}
+.footer .footer-info h3 a {
+  color: #fefefe;
+}
+.footer .footer-info h3 a:hover {
+  color: #6E6E6E;
+}
+.footer .footer-column {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.footer .footer-column .widgettitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px solid #fefefe;
+}
+.footer .footer-column label {
+  color: #fefefe;
+}
+.footer .footer-column ul li {
+  display: block;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: uppercase;
+}
+.footer .footer-column ul li a {
+  color: #fefefe;
+}
+.footer .footer-column ul li ul {
+  margin-left: 10px;
+}
+.footer .footer-column ul li ul li {
+  display: block;
+  padding: 0.7rem 1rem;
+  line-height: 1;
+}
+.footer .footer-column:nth-child(2) {
+  border-left: 1px solid #fefefe;
+  border-right: 1px solid #fefefe;
 }

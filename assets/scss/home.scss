@@ -8,3 +8,95 @@
 //* Define the variables to be used in this stylesheet
 @import "mixins";
 @import "settings";
+
+#top-post {
+  background-color: rgba($grey, .30);
+  margin-top: 15px;
+  .columns {
+    padding-left: 0;
+    &.details {
+      padding: 10px;
+      .title {
+        @include robotoSlab(35px, 400, $white, none);
+        margin-left: 0;
+        a {
+          color: $white;
+        }
+      }
+      .post-details {
+        border-bottom: 1px solid $white;
+        padding-bottom: 3px;
+        img {
+          border-radius: 50px;
+          float: left;
+          margin-right: 10px;
+        }
+        .post-detail {
+          @include roboto(20px, 300, $white, none);
+          margin-top: 10px;
+        }
+      }
+      .button.white {
+        font-size: 22px;
+        width: 100%;
+      }
+    }
+    .flex-video {
+      padding-bottom: 56%;
+      margin: 0;
+    }
+  }
+}
+.home-posts {
+  padding-left: 0;
+  .video-post {
+    background-color: rgba($dark-grey, .30);
+    margin-bottom: 15px;
+    padding: 5px 10px 10px 10px;
+    .post-category {
+      @include roboto(18px, 300, $white, uppercase);
+    }
+    .flex-video {
+      padding-bottom: 56%;
+      margin: 0 -10px;
+    }
+    .title {
+      @include robotoSlab(30px, 400, $white, none);
+      margin-left: 0;
+      a {
+        color: $white;
+      }
+    }
+    .post-details {
+      padding-bottom: 3px;
+      img {
+        border-radius: 50px;
+        float: left;
+        margin-right: 10px;
+      }
+      .post-detail {
+        @include roboto(20px, 300, $white, none);
+        margin-top: 10px;
+      }
+    }
+    .button.white {
+      font-size: 22px;
+      width: 100%;
+    }
+  }
+}
+
+@media #{$small-up} { }
+@media #{$small-only} { }
+
+@media #{$medium-up} { }
+@media #{$medium-only} { }
+
+@media #{$large-up} { }
+@media #{$large-only} { }
+
+@media #{$xlarge-up} { }
+@media #{$xlarge-only} { }
+
+@media #{$xxlarge-up} { }
+@media #{$xxlarge-only} { }

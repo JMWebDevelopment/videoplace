@@ -17,7 +17,7 @@
 	    <main id="main" class="large-8 medium-8 columns first" role="main">
 	
 		    <header>
-		    	<h1 class="page-title"><span><?php _e("Posts Categorized:", "theme-slug"); ?></span> <?php single_cat_title(); ?></h1>
+		    	<h1 class="page-title"><span><?php _e("Posts Categorized:", "videoplace"); ?></span> <?php single_cat_title(); ?></h1>
 		    </header>
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -26,7 +26,7 @@
 					<header class="article-header">
 						<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 						<p class="byline">
-							Posted on <?php the_time('F j, Y') ?> by <?php the_author_posts_link(); ?>  - <?php the_category(', ') ?>
+							<?php _e('Posted on', 'videoplace'); ?> <?php the_time('F j, Y') ?> by <?php the_author_posts_link(); ?>  - <?php the_category(', ') ?>
 						</p>
 					</header> <!-- end article header -->
 
@@ -36,7 +36,7 @@
 					</section> <!-- end article section -->
 
 					<footer class="article-footer">
-						<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'theme-slug') . '</span> ', ', ', ''); ?></p>
+						<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'videoplace') . '</span> ', ', ', ''); ?></p>
 					</footer> <!-- end article footer -->
 				</article> <!-- end article -->
 			    

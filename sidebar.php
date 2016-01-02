@@ -18,7 +18,7 @@
 	<!-- This content shows up if there are no widgets defined in the backend. -->
 						
 	<div class="alert help">
-		<p><?php _e("Please activate some Widgets.", "theme-slug");  ?></p>
+		<p><?php _e("Please activate some Widgets.", "videoplace");  ?></p>
 	</div>
 
 	<?php endif; ?>

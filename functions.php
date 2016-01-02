@@ -2,7 +2,7 @@
 /**
  * functions.php
  *
- * @package **Theme Name**
+ * @package VideoPlace
  * @author Jacob Martella
  * @version 1.0
  */
@@ -24,7 +24,7 @@
 /**
  * Enqueue the necessary scripts
  */
-function theme_slug_scripts() {
+function videoplace_scripts() {
 	global $wp_styles; // Call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
 	//* Load What-Input files in footer
@@ -50,11 +50,11 @@ function theme_slug_scripts() {
 	}
 
 }
-add_action('wp_enqueue_scripts', 'theme_slug_scripts', 999);
+add_action('wp_enqueue_scripts', 'videoplace_scripts', 999);
 /**
  * Add in theme supports
  */
-function theme_slug_theme_support() {
+function videoplace_theme_support() {
 
 	//* Add WP Thumbnail Support
 	add_theme_support( 'post-thumbnails' );
@@ -116,7 +116,7 @@ function theme_slug_theme_support() {
 		)
 	); */
 }
-add_action('after_setup_theme','theme_slug_theme_support', 16);
+add_action('after_setup_theme','videoplace_theme_support', 16);
 /**
  * Include theme options
  */
@@ -128,7 +128,7 @@ require('assets/functions/menu-walkers.php');
 /**
  * Register Sidebar
  */
-function theme_slug_register_sidebars() {
+function videoplace_register_sidebars() {
 	register_sidebar(array(
 			'id' => 'sidebar1',
 			'name' => __('Sidebar', 'videoplace'),
@@ -138,8 +138,52 @@ function theme_slug_register_sidebars() {
 			'before_title' => '<h4 class="widgettitle">',
 			'after_title' => '</h4>',
 	));
+	register_sidebar(array(
+			'id' => 'footer-center',
+			'name' => __('Footer Center', 'videoplace'),
+			'description' => __('The footer center widget area.', 'videoplace'),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4 class="widgettitle">',
+			'after_title' => '</h4>',
+	));
+	register_sidebar(array(
+			'id' => 'footer-right',
+			'name' => __('Footer Right', 'videoplace'),
+			'description' => __('The footer right widget area.', 'videoplace'),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget' => '</div>',
+			'before_title' => '<h4 class="widgettitle">',
+			'after_title' => '</h4>',
+	));
 }
-add_action( 'widgets_init', 'theme_slug_register_sidebars' );
+add_action( 'widgets_init', 'videoplace_register_sidebars' );
+/**
+ * Returns the first video embed in a post for display
+ *
+ * @param int, post id
+ * @return string, link for first embeded video
+ */
+function videoplace_get_first_embed_media($post_id) {
+
+	$post = get_post($post_id);
+	$content = do_shortcode( apply_filters( 'the_content', $post->post_content ) );
+	$embeds = get_media_embedded_in_content( $content );
+
+	if( !empty($embeds) ) {
+		//check what is the first embed containg video tag, youtube or vimeo
+		foreach( $embeds as $embed ) {
+			if( strpos( $embed, 'video' ) || strpos( $embed, 'youtube' ) || strpos( $embed, 'vimeo' ) ) {
+				return $embed;
+			}
+		}
+
+	} else {
+		//No video embedded found
+		return false;
+	}
+
+}
 /**
  ******************** II. Header Functions *********************************
  */
@@ -167,7 +211,7 @@ register_nav_menus(
 /**
  * Numeric Archive Page Navigation
  */
-function theme_slug_page_navi($before = '', $after = '') {
+function videoplace_page_navi($before = '', $after = '') {
 	global $wpdb, $wp_query;
 	$request = $wp_query->request;
 	$posts_per_page = intval(get_query_var('posts_per_page'));
@@ -221,13 +265,21 @@ function theme_slug_page_navi($before = '', $after = '') {
 	}
 	echo '</ul></nav>'.$after."";
 }
+
+/**
+ * Change the read more text
+ */
+function videoplace_new_excerpt_more($more) {
+	return '';
+}
+add_filter('excerpt_more', 'videoplace_new_excerpt_more');
 /**
  ******************** VII. Author Functions *********************************
  */
 /**
  ******************** VIII. Comments Functions *********************************
  */
-function theme_slug_comments($comment, $args, $depth) {
+function videoplace_comments($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment; ?>
 <li <?php comment_class('panel'); ?>>
 	<div class="media-object">
@@ -241,13 +293,13 @@ function theme_slug_comments($comment, $args, $depth) {
 					// create variable
 					$bgauthemail = get_comment_author_email();
 					?>
-					<?php printf(__('%s', 'theme-slug'), get_comment_author_link()) ?> on
+					<?php printf(__('%s', 'videoplace'), get_comment_author_link()) ?> on
 					<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__(' F jS, Y - g:ia', 'theme-slug')); ?> </a></time>
-					<?php edit_comment_link(__('(Edit)', 'theme-slug'),'  ','') ?>
+					<?php edit_comment_link(__('(Edit)', 'videoplace'),'  ','') ?>
 				</header>
 				<?php if ($comment->comment_approved == '0') : ?>
 					<div class="alert alert-info">
-						<p><?php _e('Your comment is awaiting moderation.', 'theme-slug') ?></p>
+						<p><?php _e('Your comment is awaiting moderation.', 'videoplace') ?></p>
 					</div>
 				<?php endif; ?>
 				<section class="comment_content clearfix">

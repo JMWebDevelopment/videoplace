@@ -11,160 +11,54 @@
 
 	<div id="content">
 
+		<div class="row" id="top-post">
+			<?php
+				$top_post_args = array(
+					'posts_per_page' => 1,
+					'ignore_sticky_posts' => true
+				);
+				$top_post = new WP_Query($top_post_args);
+				if ($top_post->have_posts()) : while ($top_post->have_posts()) : $top_post->the_post(); $do_not_duplicate[] = $post->ID;
+			?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<div class="large-7 medium-7 small-12 columns">
+						<?php echo videoplace_get_first_embed_media($post->ID); ?>
+					</div>
+					<div class="details large-5 medium-5 small-12 columns">
+						<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<div class="post-details clearfix">
+							<?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?>
+							<h4 class="post-detail"><?php echo __('Posted by ', 'videoplace') . get_the_author_link() . __(' on ', 'videoplace') . get_the_date('F j, Y'); ?></h4>
+						</div>
+						<?php the_excerpt(); ?>
+						<a href="<?php the_permalink(); ?>" class="button white"><?php _e('Read More', 'videoplace'); ?></a>
+					</div>
+				</article>
+			<?php endwhile; endif; ?>
+		</div>
+
 		<div id="inner-content" class="row">
 
-			<div class="large-12 columns">
-				<h1>Welcome to Foundation</h1>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="large-12 columns">
-				<div class="panel">
-					<h3>We&rsquo;re stoked you want to try Foundation! </h3>
-					<p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-					<p>Once you've exhausted the fun in this document, you should check out:</p>
-					<div class="row">
-						<div class="large-4 medium-4 columns">
-							<p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
+			<div class="home-posts large-8 medium-8 small-12 columns">
+				<?php
+					$home_args = array(
+						'posts_per_page' => 10,
+						'post__not_in' => $do_not_duplicate
+					);
+					$home_posts = new WP_Query($home_args);
+					if ($home_posts->have_posts()) : while ($home_posts->have_posts()) : $home_posts->the_post();
+				?>
+					<article id="post-<?php the_ID(); ?>" <?php post_class('video-post'); ?>>
+						<h5 class="post-category"><?php $cats = get_the_category(); echo $cats[0]->name; ?></h5>
+						<?php echo videoplace_get_first_embed_media($post->ID); ?>
+						<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+						<div class="post-details clearfix">
+							<?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?>
+							<h4 class="post-detail"><?php echo __('Posted by ', 'videoplace') . get_the_author_link() . __(' on ', 'videoplace') . get_the_date('F j, Y'); ?></h4>
 						</div>
-						<div class="large-4 medium-4 columns">
-							<p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
-						</div>
-						<div class="large-4 medium-4 columns">
-							<p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="large-4 medium-4 medium-push-2 columns">
-							<p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-						</div>
-						<div class="large-4 medium-4 medium-pull-2 columns">
-							<p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="large-8 medium-8 columns">
-				<h5>Here&rsquo;s your basic grid:</h5>
-				<!-- Grid Example -->
-
-				<div class="row">
-					<div class="large-12 columns">
-						<div class="callout panel">
-							<p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.panel element so you can see where the columns are - it's not required at all for the grid.</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="large-6 medium-6 columns">
-						<div class="callout panel">
-							<p>Six columns</p>
-						</div>
-					</div>
-					<div class="large-6 medium-6 columns">
-						<div class="callout panel">
-							<p>Six columns</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="large-4 medium-4 small-4 columns">
-						<div class="callout panel">
-							<p>Four columns</p>
-						</div>
-					</div>
-					<div class="large-4 medium-4 small-4 columns">
-						<div class="callout panel">
-							<p>Four columns</p>
-						</div>
-					</div>
-					<div class="large-4 medium-4 small-4 columns">
-						<div class="callout panel">
-							<p>Four columns</p>
-						</div>
-					</div>
-				</div>
-
-				<hr />
-
-				<h5>We bet you&rsquo;ll need a form somewhere:</h5>
-				<form>
-					<div class="row">
-						<div class="large-12 columns">
-							<label>Input Label</label>
-							<input type="text" placeholder="large-12.columns" />
-						</div>
-					</div>
-					<div class="row">
-						<div class="large-4 medium-4 columns">
-							<label>Input Label</label>
-							<input type="text" placeholder="large-4.columns" />
-						</div>
-						<div class="large-4 medium-4 columns">
-							<label>Input Label</label>
-							<input type="text" placeholder="large-4.columns" />
-						</div>
-						<div class="large-4 medium-4 columns">
-							<div class="row collapse">
-								<label>Input Label</label>
-								<div class="small-9 columns">
-									<input type="text" placeholder="small-9.columns" />
-								</div>
-								<div class="small-3 columns">
-									<span class="postfix">.com</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="large-12 columns">
-							<label>Select Box</label>
-							<select>
-								<option value="husker">Husker</option>
-								<option value="starbuck">Starbuck</option>
-								<option value="hotdog">Hot Dog</option>
-								<option value="apollo">Apollo</option>
-							</select>
-						</div>
-					</div>
-					<div class="row">
-						<div class="large-6 medium-6 columns">
-							<label>Choose Your Favorite</label>
-							<input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-							<input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-						</div>
-						<div class="large-6 medium-6 columns">
-							<label>Check these out</label>
-							<input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-							<input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-						</div>
-					</div>
-					<div class="row">
-						<div class="large-12 columns">
-							<label>Textarea Label</label>
-							<textarea placeholder="small-12.columns"></textarea>
-						</div>
-					</div>
-				</form>
-			</div>
-
-			<div class="large-4 medium-4 columns">
-				<h5>Try one of these buttons:</h5>
-				<p><a href="#" class="small button">Simple Button</a><br/>
-					<a href="#" class="small radius button">Radius Button</a><br/>
-					<a href="#" class="small round button">Round Button</a><br/>
-					<a href="#" class="medium success button">Success Btn</a><br/>
-					<a href="#" class="medium alert button">Alert Btn</a><br/>
-					<a href="#" class="medium secondary button">Secondary Btn</a></p>
-				<div class="panel">
-					<h5>So many components, girl!</h5>
-					<p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-					<a href="http://foundation.zurb.com/docs/" class="small button">Go to Foundation Docs</a>
-				</div>
+						<a href="<?php the_permalink(); ?>" class="button white"><?php _e('View More Info', 'videoplace'); ?></a>
+					</article>
+				<?php endwhile; endif; ?>
 			</div>
 
 			<?php get_sidebar(); ?>

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: {Theme Name}
+Theme Name: VideoPlace
 Theme URI: http://www.jacobmartella.com/wordpress/wordpress-theme/{theme-slug}-wordpress-theme
 Description:
 Author: Jacob Martella
@@ -9,7 +9,7 @@ Version: 1.0
 License: GNU General Public License & MIT
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags:
-Theme Slug: theme-slug
+Theme Slug: videoplace
 */
 /**
 * Table of Contents
@@ -5727,6 +5727,18 @@ input[type="submit"] a,
 .button a, .button a {
   color: #fefefe;
 }
+button.white,
+input[type="button"].white,
+input[type="reset"].white,
+input[type="submit"].white,
+.button.white, .button.white {
+  border: 2px solid #fefefe;
+  background-color: transparent;
+  color: #fefefe;
+  border-radius: 2px;
+  padding: 10px 15px;
+  text-align: center;
+}
 
 button:hover,
 input:hover[type="button"],
@@ -6035,34 +6047,276 @@ CSS3 GRADIENTS.
 *********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
 /**
-***************** A. Top Menu ************************ 
-*/
-.header .top-bar .menu-icon {
-  border: 0px;
-  background-color: transparent;
-}
-.header .top-bar .menu-icon:hover {
-  background-color: transparent;
-}
-
-/**
 ***************** B. Header ************************ 
 */
-.site-title a:link, .site-title a:visited {
-  font-family: Georgia;
-  font-size: 28px;
-  color: #000000;
+.masthead {
+  text-align: center;
+  padding: 20px 0;
 }
-
-.site-description a:link, .site-description a:visited {
-  font-family: Georgia;
-  font-size: 22px;
-  color: #000000;
+.masthead .site-title a:link, .masthead .site-title a:visited {
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: uppercase;
+}
+.masthead .site-description a:link, .masthead .site-description a:visited {
+  font-family: 'Roboto Slab', serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: none;
 }
 
 /**
 ***************** C. Main Menu ************************ 
 */
+.header .top-bar {
+  background-color: #000000;
+  padding: 0;
+}
+.header .top-bar ul {
+  background-color: transparent;
+}
+.header .top-bar ul .menu-item {
+  background-color: transparent;
+  border-bottom: 3px solid #000000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: uppercase;
+}
+.header .top-bar ul .menu-item a {
+  background-color: transparent;
+  color: #fefefe;
+  padding: 1rem 1rem;
+}
+.header .top-bar ul .menu-item:hover {
+  border-bottom: 3px solid #6E6E6E;
+}
+.header .top-bar ul .menu-item:hover a {
+  color: #6E6E6E;
+}
+.header .top-bar ul .menu-item.current-menu-item {
+  border-bottom: 3px solid #6E6E6E;
+}
+.header .top-bar ul .menu-item.current-menu-item a {
+  color: #6E6E6E;
+}
+.header .top-bar ul .menu-item ul {
+  top: 108% !important;
+  background-color: #000000;
+  border: 0 !important;
+}
+.header .top-bar ul .menu-item ul li {
+  border-bottom: 0;
+  background-color: #000000;
+  color: #fefefe;
+}
+.header .top-bar ul .menu-item ul li:hover {
+  border-bottom: 0;
+  color: #fefefe;
+}
+.header .top-bar ul .menu-item ul li a {
+  color: #fefefe;
+}
+.header .top-bar ul .menu-item ul li a:hover {
+  color: #fefefe;
+}
+.header .top-bar ul .menu-item ul li a:after {
+  content: '';
+  display: none !important;
+  border-color: #6E6E6E transparent transparent !important;
+}
+.header .top-bar ul .menu-item ul li ul {
+  top: 1px !important;
+}
+.header .top-bar ul .menu-icon {
+  border: 0px;
+  background-color: transparent;
+}
+.header .top-bar ul .menu-icon:hover {
+  background-color: transparent;
+}
+.header .top-bar .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a {
+  padding-right: 1rem;
+}
+.header .top-bar .dropdown.menu .is-dropdown-submenu-parent.is-down-arrow > a:after {
+  content: '';
+  display: none !important;
+  border-color: #6E6E6E transparent transparent !important;
+  top: 22px !important;
+}
+
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  .top-bar {
+    padding: 0.5rem !important;
+  }
+  .top-bar button {
+    margin-top: 0 !important;
+  }
+  .top-bar button:hover {
+    background-color: transparent;
+  }
+
+  .off-canvas {
+    background-color: #000000;
+    padding: 0;
+  }
+  .off-canvas ul {
+    background-color: transparent;
+  }
+  .off-canvas ul .menu-item {
+    background-color: transparent;
+    border-bottom: 3px solid #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fefefe;
+    text-transform: uppercase;
+  }
+  .off-canvas ul .menu-item a {
+    background-color: transparent;
+    color: #fefefe;
+    padding: 1rem 1rem;
+  }
+  .off-canvas ul .menu-item:hover {
+    border-bottom: 3px solid #6E6E6E;
+  }
+  .off-canvas ul .menu-item:hover a {
+    color: #6E6E6E;
+  }
+  .off-canvas ul .menu-item.current-menu-item {
+    border-bottom: 3px solid #6E6E6E;
+  }
+  .off-canvas ul .menu-item.current-menu-item a {
+    color: #6E6E6E;
+  }
+  .off-canvas ul .menu-item ul {
+    top: 108% !important;
+    background-color: #000000;
+    border: 0 !important;
+  }
+  .off-canvas ul .menu-item ul li {
+    border-bottom: 0;
+    background-color: #000000;
+    color: #fefefe;
+  }
+  .off-canvas ul .menu-item ul li:hover {
+    border-bottom: 0;
+    color: #fefefe;
+  }
+  .off-canvas ul .menu-item ul li a {
+    color: #fefefe;
+  }
+  .off-canvas ul .menu-item ul li a:hover {
+    color: #fefefe;
+  }
+  .off-canvas ul .menu-item ul li a:after {
+    content: '';
+    display: none !important;
+    border-color: #6E6E6E transparent transparent !important;
+  }
+  .off-canvas ul .menu-item ul li ul {
+    top: 1px !important;
+  }
+  .off-canvas ul .menu-icon {
+    border: 0px;
+    background-color: transparent;
+  }
+  .off-canvas ul .menu-icon:hover {
+    background-color: transparent;
+  }
+  .off-canvas .is-accordion-submenu-parent > a::after {
+    border-color: #6E6E6E transparent transparent !important;
+    top: 22px !important;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .top-bar {
+    padding: 0.5rem !important;
+  }
+  .top-bar button {
+    margin-top: 0 !important;
+  }
+  .top-bar button:hover {
+    background-color: transparent;
+  }
+
+  .off-canvas {
+    background-color: #000000;
+    padding: 0;
+  }
+  .off-canvas ul {
+    background-color: transparent;
+  }
+  .off-canvas ul .menu-item {
+    background-color: transparent;
+    border-bottom: 3px solid #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fefefe;
+    text-transform: uppercase;
+  }
+  .off-canvas ul .menu-item a {
+    background-color: transparent;
+    color: #fefefe;
+    padding: 1rem 1rem;
+  }
+  .off-canvas ul .menu-item:hover {
+    border-bottom: 3px solid #6E6E6E;
+  }
+  .off-canvas ul .menu-item:hover a {
+    color: #6E6E6E;
+  }
+  .off-canvas ul .menu-item.current-menu-item {
+    border-bottom: 3px solid #6E6E6E;
+  }
+  .off-canvas ul .menu-item.current-menu-item a {
+    color: #6E6E6E;
+  }
+  .off-canvas ul .menu-item ul {
+    top: 108% !important;
+    background-color: #000000;
+    border: 0 !important;
+  }
+  .off-canvas ul .menu-item ul li {
+    border-bottom: 0;
+    background-color: #000000;
+    color: #fefefe;
+  }
+  .off-canvas ul .menu-item ul li:hover {
+    border-bottom: 0;
+    color: #fefefe;
+  }
+  .off-canvas ul .menu-item ul li a {
+    color: #fefefe;
+  }
+  .off-canvas ul .menu-item ul li a:hover {
+    color: #fefefe;
+  }
+  .off-canvas ul .menu-item ul li a:after {
+    content: '';
+    display: none !important;
+    border-color: #6E6E6E transparent transparent !important;
+  }
+  .off-canvas ul .menu-item ul li ul {
+    top: 1px !important;
+  }
+  .off-canvas ul .menu-icon {
+    border: 0px;
+    background-color: transparent;
+  }
+  .off-canvas ul .menu-icon:hover {
+    background-color: transparent;
+  }
+  .off-canvas .is-accordion-submenu-parent > a::after {
+    border-color: #6E6E6E transparent transparent !important;
+    top: 22px !important;
+  }
+}
 /**
 ***************** III. Home ************************
 */
@@ -6116,6 +6370,104 @@ span.amp {
 CSS3 GRADIENTS.
 *********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
+#top-post {
+  background-color: rgba(216, 216, 216, 0.3);
+  margin-top: 15px;
+}
+#top-post .columns {
+  padding-left: 0;
+}
+#top-post .columns.details {
+  padding: 10px;
+}
+#top-post .columns.details .title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 35px;
+  font-weight: 400;
+  color: #fefefe;
+  text-transform: none;
+  margin-left: 0;
+}
+#top-post .columns.details .title a {
+  color: #fefefe;
+}
+#top-post .columns.details .post-details {
+  border-bottom: 1px solid #fefefe;
+  padding-bottom: 3px;
+}
+#top-post .columns.details .post-details img {
+  border-radius: 50px;
+  float: left;
+  margin-right: 10px;
+}
+#top-post .columns.details .post-details .post-detail {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: none;
+  margin-top: 10px;
+}
+#top-post .columns.details .button.white {
+  font-size: 22px;
+  width: 100%;
+}
+#top-post .columns .flex-video {
+  padding-bottom: 56%;
+  margin: 0;
+}
+
+.home-posts {
+  padding-left: 0;
+}
+.home-posts .video-post {
+  background-color: rgba(110, 110, 110, 0.3);
+  margin-bottom: 15px;
+  padding: 5px 10px 10px 10px;
+}
+.home-posts .video-post .post-category {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: uppercase;
+}
+.home-posts .video-post .flex-video {
+  padding-bottom: 56%;
+  margin: 0 -10px;
+}
+.home-posts .video-post .title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #fefefe;
+  text-transform: none;
+  margin-left: 0;
+}
+.home-posts .video-post .title a {
+  color: #fefefe;
+}
+.home-posts .video-post .post-details {
+  padding-bottom: 3px;
+}
+.home-posts .video-post .post-details img {
+  border-radius: 50px;
+  float: left;
+  margin-right: 10px;
+}
+.home-posts .video-post .post-details .post-detail {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: none;
+  margin-top: 10px;
+}
+.home-posts .video-post .button.white {
+  font-size: 22px;
+  width: 100%;
+}
+
 /**
 ***************** IV. Single ************************
 */
@@ -6389,6 +6741,27 @@ CSS3 GRADIENTS.
 /**
 ***************** A. Widgets ************************ 
 */
+.sidebar {
+  padding-right: 0;
+}
+.sidebar .widget {
+  background-color: rgba(216, 216, 216, 0.3);
+  padding: 10px 5px;
+  margin-bottom: 15px;
+}
+.sidebar .widget .widgettitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 26px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px solid #fefefe;
+}
+.sidebar .widget a {
+  color: #D8D8D8;
+}
+
 /**
 ***************** X. Footer ************************
 */
@@ -6443,15 +6816,63 @@ CSS3 GRADIENTS.
 *********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
 .footer {
-  background-color: #252525;
-  color: #ffffff;
+  background-color: #0a0a0a;
+  padding: 20px 0;
+}
+.footer .footer-info {
   text-align: center;
 }
-
-.footer a, .footer a:link, .footer a:visited {
-  color: #ffffff;
+.footer .footer-info img {
+  width: 40%;
+  height: auto;
+  margin-bottom: 10px;
 }
-
-.footer a:hover {
-  color: #000000;
+.footer .footer-info h3 {
+  font-size: 20px;
+}
+.footer .footer-info h3 a {
+  color: #fefefe;
+}
+.footer .footer-info h3 a:hover {
+  color: #6E6E6E;
+}
+.footer .footer-column {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.footer .footer-column .widgettitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px solid #fefefe;
+}
+.footer .footer-column label {
+  color: #fefefe;
+}
+.footer .footer-column ul li {
+  display: block;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #fefefe;
+  text-transform: uppercase;
+}
+.footer .footer-column ul li a {
+  color: #fefefe;
+}
+.footer .footer-column ul li ul {
+  margin-left: 10px;
+}
+.footer .footer-column ul li ul li {
+  display: block;
+  padding: 0.7rem 1rem;
+  line-height: 1;
+}
+.footer .footer-column:nth-child(2) {
+  border-left: 1px solid #fefefe;
+  border-right: 1px solid #fefefe;
 }

@@ -31,7 +31,7 @@
 					    </section> <!-- end article section -->
 
 					    <footer class="article-footer">
-						    <p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'theme-slug') . '</span> ', ', ', ''); ?></p>
+						    <p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'videoplace') . '</span> ', ', ', ''); ?></p>
 					    </footer> <!-- end article footer -->
 				    </article> <!-- end article -->
 				    

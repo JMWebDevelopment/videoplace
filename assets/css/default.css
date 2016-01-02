@@ -265,6 +265,18 @@ input[type="submit"] a,
 .button a, .button a {
   color: #fefefe;
 }
+button.white,
+input[type="button"].white,
+input[type="reset"].white,
+input[type="submit"].white,
+.button.white, .button.white {
+  border: 2px solid #fefefe;
+  background-color: transparent;
+  color: #fefefe;
+  border-radius: 2px;
+  padding: 10px 15px;
+  text-align: center;
+}
 
 button:hover,
 input:hover[type="button"],

@@ -17,12 +17,29 @@
 		<main id="main" class="large-8 medium-8 columns first" role="main">
 		
 		    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		
-		    	<?php get_template_part( 'parts/loop', 'single' ); ?>
+
+			    <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+				    <header class="article-header">
+					    <h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+					    <p class="byline">
+						    <?php _e('Posted on', 'videoplace'); ?> <?php the_time('F j, Y') ?> by <?php the_author_posts_link(); ?>  - <?php the_category(', ') ?>
+					    </p>
+				    </header> <!-- end article header -->
+
+				    <section class="entry-content" itemprop="articleBody">
+					    <?php the_post_thumbnail('full'); ?>
+					    <?php the_content(); ?>
+				    </section> <!-- end article section -->
+
+				    <footer class="article-footer">
+					    <p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'videoplace') . '</span> ', ', ', ''); ?></p>	</footer> <!-- end article footer -->
+
+				    <?php comments_template(); ?>
+
+			    </article> <!-- end article -->
 		    					
-		    <?php endwhile; else : ?>
-		
-		   		<?php get_template_part( 'parts/content', 'missing' ); ?>
+		    <?php endwhile; ?>
 
 		    <?php endif; ?>
 

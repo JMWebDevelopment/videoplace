@@ -22,7 +22,7 @@
 				    <header class="article-header">
 					    <h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 					    <p class="byline">
-						    Posted on <?php the_time('F j, Y') ?> by <?php the_author_posts_link(); ?>  - <?php the_category(', ') ?>
+						    <?php _e('Posted on', 'videoplace'); ?> <?php the_time('F j, Y') ?> by <?php the_author_posts_link(); ?>  - <?php the_category(', ') ?>
 					    </p>
 				    </header> <!-- end article header -->
 
@@ -32,7 +32,7 @@
 				    </section> <!-- end article section -->
 
 				    <footer class="article-footer">
-					    <p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'theme-slug') . '</span> ', ', ', ''); ?></p>	</footer> <!-- end article footer -->
+					    <p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'videoplace') . '</span> ', ', ', ''); ?></p>	</footer> <!-- end article footer -->
 
 				    <?php comments_template(); ?>
 

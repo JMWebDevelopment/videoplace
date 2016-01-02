@@ -160,6 +160,14 @@ input[type="submit"],
      a {
           color: $white;
      }
+     &.white {
+          border: 2px solid $white;
+          background-color: transparent;
+          color: $white;
+          border-radius: 2px;
+          padding: 10px 15px;
+          text-align: center;
+     }
 }
 button:hover,
 input:hover[type="button"],
@@ -236,3 +244,18 @@ ol > li {
 ul, ol {
      list-style-position: inside;
 }
+
+@media #{$small-up} { }
+@media #{$small-only} { }
+
+@media #{$medium-up} { }
+@media #{$medium-only} { }
+
+@media #{$large-up} { }
+@media #{$large-only} { }
+
+@media #{$xlarge-up} { }
+@media #{$xlarge-only} { }
+
+@media #{$xxlarge-up} { }
+@media #{$xxlarge-only} { }

@@ -2,7 +2,7 @@
 /**
  * Header.php
  *
- * @package ***Theme Name***
+ * @package VideoPlace
  * @author  Jacob Martella
  * @version  1.0
  */

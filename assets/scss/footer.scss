@@ -8,19 +8,74 @@
 //* Define the variables to be used in this stylesheet
 @import "mixins";
 @import "settings";
-$background_color: #252525;
-$color: #ffffff;
 
 .footer {
-	background-color: $background_color;
-	color: $color;
-	text-align: center;
+	background-color: $black;
+	padding: 20px 0;
+	.footer-info {
+		text-align: center;
+		img {
+			width: 40%;
+			height: auto;
+			margin-bottom: 10px;
+		}
+		h3 {
+			font-size: 20px;
+			a {
+				color: $white;
+				&:hover {
+					color: $dark-grey;
+				}
+			}
+		}
+	}
+	.footer-column {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		.widgettitle {
+			@include roboto(24px, 300, $white, uppercase);
+			text-align: center;
+			border-bottom: 1px solid $white;
+		}
+		label {
+			color: $white;
+		}
+		ul {
+			li {
+				display: block;
+				margin: 0;
+				@include roboto(16px, 300, $white, uppercase);
+				a {
+					color: $white;
+				}
+				ul {
+					margin-left: 10px;
+					li {
+						display: block;
+						padding: 0.7rem 1rem;
+						line-height: 1;
+					}
+				}
+			}
+		}
+		&:nth-child(2) {
+			border-left: 1px solid $white;
+			border-right: 1px solid $white;
+		}
+	}
 }
 
-.footer a, .footer a:link, .footer a:visited {
-	color: $color;
-}
+@media #{$small-up} { }
+@media #{$small-only} { }
 
-.footer a:hover {
-	color: #000000;
-}
+@media #{$medium-up} { }
+@media #{$medium-only} { }
+
+@media #{$large-up} { }
+@media #{$large-only} { }
+
+@media #{$xlarge-up} { }
+@media #{$xlarge-only} { }
+
+@media #{$xxlarge-up} { }
+@media #{$xxlarge-only} { }
