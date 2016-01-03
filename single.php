@@ -2,7 +2,7 @@
 /**
  * single.php
  *
- * @package ***Theme Name***
+ * @package VideoPlace
  * @author  Jacob Martella
  * @version  1.0
  */
@@ -28,7 +28,7 @@
 						    <h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 						    <div class="post-details clearfix">
 							    <?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?>
-							    <h4 class="post-detail"><?php echo __('Posted by ', 'videoplace') . get_the_author_link() . __(' on ', 'videoplace') . get_the_date('F j, Y'); ?></h4>
+							    <h4 class="post-detail"><?php echo __('Posted by ', 'videoplace'); the_author_posts_link(); echo __(' on ', 'videoplace'); the_date('F j, Y'); ?></h4>
 						    </div>
 						    <?php the_excerpt(); ?>
 						    <p class="tags"><?php the_tags('<span class="the-tag">', '</span><span class="the-tag">', '</span>'); ?></p>	</footer> <!-- end article footer -->

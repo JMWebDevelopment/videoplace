@@ -1,7 +1,7 @@
 /**
 * Home Styles
 *
-* @package ***Theme Name***
+* @package VideoPlace
 * @author Jacob Martella
 * @version 1.0
 */
@@ -34,6 +34,9 @@
         .post-detail {
           @include roboto(20px, 300, $white, none);
           margin-top: 10px;
+          a {
+            color: $white;
+          }
         }
       }
       .button.white {
@@ -47,41 +50,49 @@
     }
   }
 }
-.home-posts {
-  padding-left: 0;
-  .video-post {
-    background-color: rgba($dark-grey, .30);
-    margin-bottom: 15px;
-    padding: 5px 10px 10px 10px;
-    .post-category {
-      @include roboto(18px, 300, $white, uppercase);
-    }
-    .flex-video {
-      padding-bottom: 56%;
-      margin: 0 -10px;
-    }
-    .title {
-      @include robotoSlab(30px, 400, $white, none);
-      margin-left: 0;
-      a {
-        color: $white;
+.home-posts-section {
+  border-top: 1px solid $white;
+  padding-top: 15px;
+  margin-top: 15px;
+  .home-posts {
+    padding-left: 0;
+    .video-post {
+      background-color: rgba($dark-grey, .30);
+      margin-bottom: 15px;
+      padding: 5px 10px 10px 10px;
+      .post-category {
+        @include roboto(18px, 300, $white, uppercase);
       }
-    }
-    .post-details {
-      padding-bottom: 3px;
-      img {
-        border-radius: 50px;
-        float: left;
-        margin-right: 10px;
+      .flex-video {
+        padding-bottom: 56%;
+        margin: 0 -10px;
       }
-      .post-detail {
-        @include roboto(20px, 300, $white, none);
-        margin-top: 10px;
+      .title {
+        @include robotoSlab(30px, 400, $white, none);
+        margin-left: 0;
+        a {
+          color: $white;
+        }
       }
-    }
-    .button.white {
-      font-size: 22px;
-      width: 100%;
+      .post-details {
+        padding-bottom: 3px;
+        img {
+          border-radius: 50px;
+          float: left;
+          margin-right: 10px;
+        }
+        .post-detail {
+          @include roboto(20px, 300, $white, none);
+          margin-top: 10px;
+          a {
+            color: $white;
+          }
+        }
+      }
+      .button.white {
+        font-size: 22px;
+        width: 100%;
+      }
     }
   }
 }

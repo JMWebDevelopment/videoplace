@@ -2,7 +2,7 @@
 /**
  * Home.php
  *
- * @package ***Theme Name***
+ * @package VideoPlace
  * @author  Jacob Martella
  * @version  1.0
  */
@@ -28,7 +28,7 @@
 						<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 						<div class="post-details clearfix">
 							<?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?>
-							<h4 class="post-detail"><?php echo __('Posted by ', 'videoplace') . get_the_author_link() . __(' on ', 'videoplace') . get_the_date('F j, Y'); ?></h4>
+							<h4 class="post-detail"><?php echo __('Posted by ', 'videoplace'); the_author_posts_link(); echo __(' on ', 'videoplace'); the_date('F j, Y'); ?></h4>
 						</div>
 						<?php the_excerpt(); ?>
 						<a href="<?php the_permalink(); ?>" class="button white"><?php _e('Read More', 'videoplace'); ?></a>
@@ -37,7 +37,7 @@
 			<?php endwhile; endif; ?>
 		</div>
 
-		<div id="inner-content" class="row">
+		<div id="inner-content" class="row home-posts-section">
 
 			<div class="home-posts large-8 medium-8 small-12 columns">
 				<?php
@@ -54,7 +54,7 @@
 						<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 						<div class="post-details clearfix">
 							<?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?>
-							<h4 class="post-detail"><?php echo __('Posted by ', 'videoplace') . get_the_author_link() . __(' on ', 'videoplace') . get_the_date('F j, Y'); ?></h4>
+							<h4 class="post-detail"><?php echo __('Posted by ', 'videoplace'); the_author_posts_link(); echo __(' on ', 'videoplace'); the_date('F j, Y'); ?></h4>
 						</div>
 						<a href="<?php the_permalink(); ?>" class="button white"><?php _e('View More Info', 'videoplace'); ?></a>
 					</article>

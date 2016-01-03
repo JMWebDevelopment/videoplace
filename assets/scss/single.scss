@@ -6,8 +6,8 @@
 * @version 1.0
 */
 //* Define the variables to be used in this stylesheet
-@import "mixins";
-@import "settings";
+@import "_settings";
+@import "_mixins";
 
 .video-top {
   padding-bottom: 15px;
@@ -41,6 +41,9 @@
         .post-detail {
           @include roboto(20px, 300, $white, none);
           margin-top: -2px;
+          a {
+            color: $white;
+          }
         }
       }
       .the-tag {

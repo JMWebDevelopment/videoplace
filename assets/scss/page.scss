@@ -1,13 +1,13 @@
 /**
 * Page Styles
 *
-* @package ***Theme Name***
+* @package VideoPlace
 * @author Jacob Martella
 * @version 1.0
 */
 //* Define the variables to be used in this stylesheet
-@import "mixins";
-@import "settings";
+@import "_settings";
+@import "_mixins";
 
 .page-post {
   .article-header {
@@ -34,6 +34,20 @@
 /**
 ***************** A. 404 ************************ 
 */
+.content-not-found {
+  background-color: rgba($grey, .30);
+  padding: 10px 15px;
+  h1 {
+    @include roboto(150px, 300, $white, uppercase);
+    margin-bottom: 15px;
+  }
+  h3 {
+    @include robotoSlab(40px, 400, $white, none);
+  }
+  p {
+    @include playfair(18px, 400, $white, none);
+  }
+}
 
 @media #{$small-up} { }
 @media #{$small-only} { }

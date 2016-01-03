@@ -6,8 +6,8 @@
 * @version 1.0
 */
 //* Define the variables to be used in this stylesheet
-@import "mixins";
-@import "settings";
+@import "_settings";
+@import "_mixins";
 
 textarea {
      overflow:auto;
@@ -75,6 +75,9 @@ ol,
 ul {
      margin: 0;
      padding: 0;
+}
+label {
+     color: $white;
 }
 /*
 C. Headings

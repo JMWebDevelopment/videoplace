@@ -305,9 +305,11 @@ function videoplace_page_navi($before = '', $after = '') {
 		$first_page_text = __( "First", 'theme-slug' );
 		echo '<li><a href="'.get_pagenum_link().'" title="'.$first_page_text.'">'.$first_page_text.'</a></li>';
 	}
-	echo '<li>';
-	previous_posts_link('Previous');
-	echo '</li>';
+	if (get_previous_posts_link()) {
+		echo '<li>';
+		previous_posts_link( '&laquo;&laquo; Previous' );
+		echo '</li>';
+	}
 	for($i = $start_page; $i  <= $end_page; $i++) {
 		if($i == $paged) {
 			echo '<li class="current"> '.$i.' </li>';
@@ -315,9 +317,11 @@ function videoplace_page_navi($before = '', $after = '') {
 			echo '<li><a href="'.get_pagenum_link($i).'">'.$i.'</a></li>';
 		}
 	}
-	echo '<li>';
-	next_posts_link('Next');
-	echo '</li>';
+	if (get_next_posts_link()) {
+		echo '<li>';
+		next_posts_link( 'Next &#187;&#187;' );
+		echo '</li>';
+	}
 	if ($end_page < $max_page) {
 		$last_page_text = __( "Last", 'theme-slug' );
 		echo '<li><a href="'.get_pagenum_link($max_page).'" title="'.$last_page_text.'">'.$last_page_text.'</a></li>';
@@ -353,6 +357,9 @@ function videoplace_archive_title($title) {
 	}
 	else if (is_tag()) {
 		$title = single_tag_title('', false);
+	}
+	else if (is_author()) {
+		$title = __('Videos Posted By: ', 'videoplace') . get_the_author();
 	}
 	else {
 		$page = get_query_var('paged');

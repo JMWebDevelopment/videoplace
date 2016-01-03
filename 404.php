@@ -18,11 +18,12 @@
 				<article id="content-not-found">
 				
 					<header class="article-header">
-						<h1><?php _e("Epic 404 - Article Not Found", "videoplace"); ?></h1>
+						<h1><?php _e("404", "videoplace"); ?></h1>
 					</header> <!-- end article header -->
 			
 					<section class="entry-content">
-						<p><?php _e("The article you were looking for was not found, but maybe try looking again!", "videoplace"); ?></p>
+						<h3><?php _e("Whoops! Content not found!", "videoplace"); ?></h3>
+						<p><?php _e("We’re terribly sorry, but we couldn’t find what you were looking for. It might have been removed. We suggesting going to the home page or using the search form to look through our content. In the meantime, here’s one of our amazing videos!", "videoplace"); ?></p>
 					</section> <!-- end article section -->
 
 					<section class="search">
@@ -30,6 +31,17 @@
 					</section> <!-- end search section -->
 			
 				</article> <!-- end article -->
+
+				<?php
+				$home_args = array(
+						'posts_per_page' => 1,
+						'orderby' => 'rand'
+				);
+				$home_posts = new WP_Query($home_args);
+				if ($home_posts->have_posts()) : while ($home_posts->have_posts()) : $home_posts->the_post();
+					?>
+					<?php echo videoplace_get_first_embed_media($post->ID); ?>
+				<?php endwhile; endif; ?>
 	
 			</main> <!-- end #main -->
 

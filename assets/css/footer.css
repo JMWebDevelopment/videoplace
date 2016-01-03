@@ -5,51 +5,8 @@
 * @author Jacob Martella
 * @version 1.0
 */
-/******************************************************************
-
-Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of Sass' great features:
-Mixins & Constants.
-
-******************************************************************/
-/*********************
-TOOLS
-*********************/
-.image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-/*********************
-COLORS
-*********************/
-/*********************
-TYPOGRAPHY
-*********************/
-/*	@font-face {
-    	font-family: 'Font Name';
-    	src: url('assets/fonts/font-name.eot');
-    	src: url('assets/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/font-name.woff') format('woff'),
-             url('assets/fonts/font-name.ttf') format('truetype'),
-             url('assets/fonts/font-name.svg#font-name') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
-*/
-span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic;
-}
-
-/*********************
-CSS3 GRADIENTS.
-*********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
 .footer {
-  background-color: #0a0a0a;
+  background-color: #000000;
   padding: 20px 0;
 }
 .footer .footer-info {
@@ -64,7 +21,7 @@ CSS3 GRADIENTS.
   font-size: 20px;
 }
 .footer .footer-info h3 a {
-  color: #fefefe;
+  color: #FFFFFF;
 }
 .footer .footer-info h3 a:hover {
   color: #6E6E6E;
@@ -77,13 +34,13 @@ CSS3 GRADIENTS.
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: uppercase;
   text-align: center;
-  border-bottom: 1px solid #fefefe;
+  border-bottom: 1px solid #FFFFFF;
 }
 .footer .footer-column label {
-  color: #fefefe;
+  color: #FFFFFF;
 }
 .footer .footer-column ul li {
   display: block;
@@ -91,11 +48,11 @@ CSS3 GRADIENTS.
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: uppercase;
 }
 .footer .footer-column ul li a {
-  color: #fefefe;
+  color: #FFFFFF;
 }
 .footer .footer-column ul li ul {
   margin-left: 10px;
@@ -106,6 +63,6 @@ CSS3 GRADIENTS.
   line-height: 1;
 }
 .footer .footer-column:nth-child(2) {
-  border-left: 1px solid #fefefe;
-  border-right: 1px solid #fefefe;
+  border-left: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
 }

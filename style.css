@@ -432,49 +432,6 @@ th {
   padding: 0;
 }
 
-/******************************************************************
-
-Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of Sass' great features:
-Mixins & Constants.
-
-******************************************************************/
-/*********************
-TOOLS
-*********************/
-.image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-/*********************
-COLORS
-*********************/
-/*********************
-TYPOGRAPHY
-*********************/
-/*	@font-face {
-    	font-family: 'Font Name';
-    	src: url('assets/fonts/font-name.eot');
-    	src: url('assets/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/font-name.woff') format('woff'),
-             url('assets/fonts/font-name.ttf') format('truetype'),
-             url('assets/fonts/font-name.svg#font-name') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
-*/
-span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic;
-}
-
-/*********************
-CSS3 GRADIENTS.
-*********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
 /**
  * Foundation for Sites by ZURB
  * Version 6.1.1
@@ -5467,49 +5424,6 @@ to display none.
 * @author Jacob Martella
 * @version 1.0
 */
-/******************************************************************
-
-Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of Sass' great features:
-Mixins & Constants.
-
-******************************************************************/
-/*********************
-TOOLS
-*********************/
-.image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-/*********************
-COLORS
-*********************/
-/*********************
-TYPOGRAPHY
-*********************/
-/*	@font-face {
-    	font-family: 'Font Name';
-    	src: url('assets/fonts/font-name.eot');
-    	src: url('assets/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/font-name.woff') format('woff'),
-             url('assets/fonts/font-name.ttf') format('truetype'),
-             url('assets/fonts/font-name.svg#font-name') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
-*/
-span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic;
-}
-
-/*********************
-CSS3 GRADIENTS.
-*********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
 textarea {
   overflow: auto;
   vertical-align: top;
@@ -5535,7 +5449,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 18px;
   font-weight: 400;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: none;
   margin: 0px;
   background-color: #252525;
@@ -5576,14 +5490,14 @@ a img {
 }
 
 a:hover {
-  color: #fefefe;
+  color: #FFFFFF;
 }
 
 p {
   font-family: 'Playfair Display', serif;
   font-size: 18px;
   font-weight: 400;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: none;
 }
 
@@ -5595,6 +5509,10 @@ ol,
 ul {
   margin: 0;
   padding: 0;
+}
+
+label {
+  color: #FFFFFF;
 }
 
 /*
@@ -5708,12 +5626,12 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button, .button {
-  background-color: #0a0a0a;
+  background-color: #000000;
   box-shadow: none;
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: uppercase;
   cursor: pointer;
   width: auto;
@@ -5725,16 +5643,16 @@ input[type="button"] a,
 input[type="reset"] a,
 input[type="submit"] a,
 .button a, .button a {
-  color: #fefefe;
+  color: #FFFFFF;
 }
 button.white,
 input[type="button"].white,
 input[type="reset"].white,
 input[type="submit"].white,
 .button.white, .button.white {
-  border: 2px solid #fefefe;
+  border: 2px solid #FFFFFF;
   background-color: transparent;
-  color: #fefefe;
+  color: #FFFFFF;
   border-radius: 2px;
   padding: 10px 15px;
   text-align: center;
@@ -5746,12 +5664,12 @@ input:hover[type="reset"],
 input:hover[type="submit"],
 .button:hover,
 .button:hover {
-  background-color: #fefefe;
-  color: #0a0a0a;
+  background-color: #FFFFFF;
+  color: #000000;
 }
 
 .button:hover {
-  color: #0a0a0a;
+  color: #000000;
 }
 
 .button {
@@ -5848,49 +5766,6 @@ ul, ol {
 * C. Photos
 * D. Gallery
 */
-/******************************************************************
-
-Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of Sass' great features:
-Mixins & Constants.
-
-******************************************************************/
-/*********************
-TOOLS
-*********************/
-.image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-/*********************
-COLORS
-*********************/
-/*********************
-TYPOGRAPHY
-*********************/
-/*	@font-face {
-    	font-family: 'Font Name';
-    	src: url('assets/fonts/font-name.eot');
-    	src: url('assets/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/font-name.woff') format('woff'),
-             url('assets/fonts/font-name.ttf') format('truetype'),
-             url('assets/fonts/font-name.svg#font-name') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
-*/
-span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic;
-}
-
-/*********************
-CSS3 GRADIENTS.
-*********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
 /*
 A. By Author
 ------------------------------------------- */
@@ -6003,49 +5878,6 @@ D. Gallery
 * @author Jacob Martella
 * @version 1.0
 */
-/******************************************************************
-
-Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of Sass' great features:
-Mixins & Constants.
-
-******************************************************************/
-/*********************
-TOOLS
-*********************/
-.image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-/*********************
-COLORS
-*********************/
-/*********************
-TYPOGRAPHY
-*********************/
-/*	@font-face {
-    	font-family: 'Font Name';
-    	src: url('assets/fonts/font-name.eot');
-    	src: url('assets/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/font-name.woff') format('woff'),
-             url('assets/fonts/font-name.ttf') format('truetype'),
-             url('assets/fonts/font-name.svg#font-name') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
-*/
-span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic;
-}
-
-/*********************
-CSS3 GRADIENTS.
-*********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
 /**
 ***************** B. Header ************************ 
 */
@@ -6057,14 +5889,14 @@ CSS3 GRADIENTS.
   font-family: 'Roboto', sans-serif;
   font-size: 50px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: uppercase;
 }
 .masthead .site-description a:link, .masthead .site-description a:visited {
   font-family: 'Roboto Slab', serif;
   font-size: 28px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: none;
 }
 
@@ -6084,12 +5916,12 @@ CSS3 GRADIENTS.
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: uppercase;
 }
 .header .top-bar ul .menu-item a {
   background-color: transparent;
-  color: #fefefe;
+  color: #FFFFFF;
   padding: 1rem 1rem;
 }
 .header .top-bar ul .menu-item:hover {
@@ -6112,17 +5944,17 @@ CSS3 GRADIENTS.
 .header .top-bar ul .menu-item ul li {
   border-bottom: 0;
   background-color: #000000;
-  color: #fefefe;
+  color: #FFFFFF;
 }
 .header .top-bar ul .menu-item ul li:hover {
   border-bottom: 0;
-  color: #fefefe;
+  color: #FFFFFF;
 }
 .header .top-bar ul .menu-item ul li a {
-  color: #fefefe;
+  color: #FFFFFF;
 }
 .header .top-bar ul .menu-item ul li a:hover {
-  color: #fefefe;
+  color: #FFFFFF;
 }
 .header .top-bar ul .menu-item ul li a:after {
   content: '';
@@ -6173,12 +6005,12 @@ CSS3 GRADIENTS.
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 300;
-    color: #fefefe;
+    color: #FFFFFF;
     text-transform: uppercase;
   }
   .off-canvas ul .menu-item a {
     background-color: transparent;
-    color: #fefefe;
+    color: #FFFFFF;
     padding: 1rem 1rem;
   }
   .off-canvas ul .menu-item:hover {
@@ -6201,17 +6033,17 @@ CSS3 GRADIENTS.
   .off-canvas ul .menu-item ul li {
     border-bottom: 0;
     background-color: #000000;
-    color: #fefefe;
+    color: #FFFFFF;
   }
   .off-canvas ul .menu-item ul li:hover {
     border-bottom: 0;
-    color: #fefefe;
+    color: #FFFFFF;
   }
   .off-canvas ul .menu-item ul li a {
-    color: #fefefe;
+    color: #FFFFFF;
   }
   .off-canvas ul .menu-item ul li a:hover {
-    color: #fefefe;
+    color: #FFFFFF;
   }
   .off-canvas ul .menu-item ul li a:after {
     content: '';
@@ -6257,12 +6089,12 @@ CSS3 GRADIENTS.
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 300;
-    color: #fefefe;
+    color: #FFFFFF;
     text-transform: uppercase;
   }
   .off-canvas ul .menu-item a {
     background-color: transparent;
-    color: #fefefe;
+    color: #FFFFFF;
     padding: 1rem 1rem;
   }
   .off-canvas ul .menu-item:hover {
@@ -6285,17 +6117,17 @@ CSS3 GRADIENTS.
   .off-canvas ul .menu-item ul li {
     border-bottom: 0;
     background-color: #000000;
-    color: #fefefe;
+    color: #FFFFFF;
   }
   .off-canvas ul .menu-item ul li:hover {
     border-bottom: 0;
-    color: #fefefe;
+    color: #FFFFFF;
   }
   .off-canvas ul .menu-item ul li a {
-    color: #fefefe;
+    color: #FFFFFF;
   }
   .off-canvas ul .menu-item ul li a:hover {
-    color: #fefefe;
+    color: #FFFFFF;
   }
   .off-canvas ul .menu-item ul li a:after {
     content: '';
@@ -6323,53 +6155,10 @@ CSS3 GRADIENTS.
 /**
 * Home Styles
 *
-* @package ***Theme Name***
+* @package VideoPlace
 * @author Jacob Martella
 * @version 1.0
 */
-/******************************************************************
-
-Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of Sass' great features:
-Mixins & Constants.
-
-******************************************************************/
-/*********************
-TOOLS
-*********************/
-.image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-/*********************
-COLORS
-*********************/
-/*********************
-TYPOGRAPHY
-*********************/
-/*	@font-face {
-    	font-family: 'Font Name';
-    	src: url('assets/fonts/font-name.eot');
-    	src: url('assets/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/font-name.woff') format('woff'),
-             url('assets/fonts/font-name.ttf') format('truetype'),
-             url('assets/fonts/font-name.svg#font-name') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
-*/
-span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic;
-}
-
-/*********************
-CSS3 GRADIENTS.
-*********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
 #top-post {
   background-color: rgba(216, 216, 216, 0.3);
   margin-top: 15px;
@@ -6408,6 +6197,9 @@ CSS3 GRADIENTS.
   text-transform: none;
   margin-top: 10px;
 }
+#top-post .columns.details .post-details .post-detail a {
+  color: #fefefe;
+}
 #top-post .columns.details .button.white {
   font-size: 22px;
   width: 100%;
@@ -6417,26 +6209,31 @@ CSS3 GRADIENTS.
   margin: 0;
 }
 
-.home-posts {
+.home-posts-section {
+  border-top: 1px solid #fefefe;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+.home-posts-section .home-posts {
   padding-left: 0;
 }
-.home-posts .video-post {
+.home-posts-section .home-posts .video-post {
   background-color: rgba(110, 110, 110, 0.3);
   margin-bottom: 15px;
   padding: 5px 10px 10px 10px;
 }
-.home-posts .video-post .post-category {
+.home-posts-section .home-posts .video-post .post-category {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 300;
   color: #fefefe;
   text-transform: uppercase;
 }
-.home-posts .video-post .flex-video {
+.home-posts-section .home-posts .video-post .flex-video {
   padding-bottom: 56%;
   margin: 0 -10px;
 }
-.home-posts .video-post .title {
+.home-posts-section .home-posts .video-post .title {
   font-family: 'Roboto Slab', serif;
   font-size: 30px;
   font-weight: 400;
@@ -6444,18 +6241,18 @@ CSS3 GRADIENTS.
   text-transform: none;
   margin-left: 0;
 }
-.home-posts .video-post .title a {
+.home-posts-section .home-posts .video-post .title a {
   color: #fefefe;
 }
-.home-posts .video-post .post-details {
+.home-posts-section .home-posts .video-post .post-details {
   padding-bottom: 3px;
 }
-.home-posts .video-post .post-details img {
+.home-posts-section .home-posts .video-post .post-details img {
   border-radius: 50px;
   float: left;
   margin-right: 10px;
 }
-.home-posts .video-post .post-details .post-detail {
+.home-posts-section .home-posts .video-post .post-details .post-detail {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 300;
@@ -6463,7 +6260,10 @@ CSS3 GRADIENTS.
   text-transform: none;
   margin-top: 10px;
 }
-.home-posts .video-post .button.white {
+.home-posts-section .home-posts .video-post .post-details .post-detail a {
+  color: #fefefe;
+}
+.home-posts-section .home-posts .video-post .button.white {
   font-size: 22px;
   width: 100%;
 }
@@ -6478,52 +6278,9 @@ CSS3 GRADIENTS.
 * @author Jacob Martella
 * @version 1.0
 */
-/******************************************************************
-
-Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of Sass' great features:
-Mixins & Constants.
-
-******************************************************************/
-/*********************
-TOOLS
-*********************/
-.image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-/*********************
-COLORS
-*********************/
-/*********************
-TYPOGRAPHY
-*********************/
-/*	@font-face {
-    	font-family: 'Font Name';
-    	src: url('assets/fonts/font-name.eot');
-    	src: url('assets/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/font-name.woff') format('woff'),
-             url('assets/fonts/font-name.ttf') format('truetype'),
-             url('assets/fonts/font-name.svg#font-name') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
-*/
-span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic;
-}
-
-/*********************
-CSS3 GRADIENTS.
-*********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
 .video-top {
   padding-bottom: 15px;
-  border-bottom: 1px solid #fefefe;
+  border-bottom: 1px solid #FFFFFF;
   margin-bottom: 15px;
 }
 .video-top .video {
@@ -6545,12 +6302,12 @@ CSS3 GRADIENTS.
   font-family: 'Roboto Slab', serif;
   font-size: 30px;
   font-weight: 400;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: none;
   margin: 0 0 5px 0;
 }
 .video-top .article-details .article-header .post-details {
-  border-bottom: 1px solid #fefefe;
+  border-bottom: 1px solid #FFFFFF;
   padding-bottom: 3px;
 }
 .video-top .article-details .article-header .post-details img {
@@ -6562,29 +6319,32 @@ CSS3 GRADIENTS.
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: none;
   margin-top: -2px;
 }
+.video-top .article-details .article-header .post-details .post-detail a {
+  color: #FFFFFF;
+}
 .video-top .article-details .article-header .the-tag {
-  border: 1px solid #fefefe;
+  border: 1px solid #FFFFFF;
   border-radius: 2px;
   padding: 3px 5px;
   margin-right: 3px;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: none;
 }
 .video-top .article-details .article-header .the-tag a {
-  color: #fefefe;
+  color: #FFFFFF;
 }
 .video-top .article-details .article-header .the-tag:hover {
-  background-color: #fefefe;
+  background-color: #FFFFFF;
 }
 .video-top .article-details .article-header .the-tag:hover a {
-  color: #0a0a0a;
+  color: #000000;
 }
 
 .post-more {
@@ -6604,9 +6364,9 @@ CSS3 GRADIENTS.
   font-family: 'Roboto Slab', serif;
   font-size: 30px;
   font-weight: 400;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: uppercase;
-  border-bottom: 1px solid #fefefe;
+  border-bottom: 1px solid #FFFFFF;
   margin-left: 10px;
   margin-bottom: 10px;
 }
@@ -6621,19 +6381,19 @@ CSS3 GRADIENTS.
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: uppercase;
 }
 .related-posts .video-post .title {
   font-family: 'Roboto Slab', serif;
   font-size: 30px;
   font-weight: 400;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: none;
   margin-left: 0;
 }
 .related-posts .video-post .title a {
-  color: #fefefe;
+  color: #FFFFFF;
 }
 .related-posts .video-post .post-details {
   padding-bottom: 3px;
@@ -6647,7 +6407,7 @@ CSS3 GRADIENTS.
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: none;
   margin-top: 10px;
   border-bottom: 0;
@@ -6667,59 +6427,16 @@ CSS3 GRADIENTS.
 * @author Jacob Martella
 * @version 1.0
 */
-/******************************************************************
-
-Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of Sass' great features:
-Mixins & Constants.
-
-******************************************************************/
-/*********************
-TOOLS
-*********************/
-.image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-/*********************
-COLORS
-*********************/
-/*********************
-TYPOGRAPHY
-*********************/
-/*	@font-face {
-    	font-family: 'Font Name';
-    	src: url('assets/fonts/font-name.eot');
-    	src: url('assets/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/font-name.woff') format('woff'),
-             url('assets/fonts/font-name.ttf') format('truetype'),
-             url('assets/fonts/font-name.svg#font-name') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
-*/
-span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic;
-}
-
-/*********************
-CSS3 GRADIENTS.
-*********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
 .comments-area {
   background-color: rgba(110, 110, 110, 0.3);
   padding: 10px 15px;
   margin-bottom: 15px;
 }
 .comments-area .comments-title {
-  border-bottom: 1px solid #fefefe;
+  border-bottom: 1px solid #FFFFFF;
 }
 .comments-area .comment {
-  border-bottom: 1px solid #fefefe;
+  border-bottom: 1px solid #FFFFFF;
 }
 .comments-area .comment img {
   border-radius: 75px;
@@ -6728,52 +6445,52 @@ CSS3 GRADIENTS.
   font-family: 'Roboto Slab', serif;
   font-size: 28px;
   font-weight: 400;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: none;
 }
 .comments-area .comment h3 a {
-  color: #fefefe;
+  color: #FFFFFF;
 }
 .comments-area .comment h5 {
   font-family: 'Roboto', sans-serif;
   font-size: 22px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: none;
 }
 .comments-area .comment h5 a {
-  color: #fefefe;
+  color: #FFFFFF;
 }
 .comments-area .comment .comment-reply-link {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: none;
-  border: 2px solid #fefefe;
+  border: 2px solid #FFFFFF;
   border-radius: 2px;
-  color: #fefefe;
+  color: #FFFFFF;
   padding: 3px 8px;
 }
 .comments-area .comment .comment-reply-link a {
-  color: #fefefe;
+  color: #FFFFFF;
 }
 .comments-area .comment .comment-reply-link:hover {
-  background-color: #fefefe;
-  color: #0a0a0a;
+  background-color: #FFFFFF;
+  color: #000000;
 }
 .comments-area .comment label {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: none;
 }
 .comments-area label {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: none;
 }
 
@@ -6785,109 +6502,145 @@ CSS3 GRADIENTS.
 *
 * This file contains the styles for both the index and archive templates
 *
-* @package ***Theme Name***
+* @package VideoPlace
 * @author Jacob Martella
 * @version 1.0
 */
-/******************************************************************
-
-Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of Sass' great features:
-Mixins & Constants.
-
-******************************************************************/
-/*********************
-TOOLS
-*********************/
-.image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+.archive-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border-bottom: 1px solid #FFFFFF;
+  text-align: center;
+  margin: 0 0 15px 0;
 }
 
-/*********************
-COLORS
-*********************/
-/*********************
-TYPOGRAPHY
-*********************/
-/*	@font-face {
-    	font-family: 'Font Name';
-    	src: url('assets/fonts/font-name.eot');
-    	src: url('assets/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/font-name.woff') format('woff'),
-             url('assets/fonts/font-name.ttf') format('truetype'),
-             url('assets/fonts/font-name.svg#font-name') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
+.archive-video-post {
+  background-color: rgba(110, 110, 110, 0.3);
+  margin-bottom: 15px;
+  padding: 5px 10px 10px 10px;
+}
+.archive-video-post .post-category {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.archive-video-post .flex-video {
+  padding-bottom: 56%;
+  margin: 0 -10px;
+}
+.archive-video-post .title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-transform: none;
+  margin-left: 0;
+}
+.archive-video-post .title a {
+  color: #FFFFFF;
+}
+.archive-video-post .post-details {
+  padding-bottom: 3px;
+}
+.archive-video-post .post-details img {
+  border-radius: 50px;
+  float: left;
+  margin-right: 10px;
+}
+.archive-video-post .post-details .post-detail {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-transform: none;
+  margin-top: 10px;
+}
+.archive-video-post .post-details .post-detail a {
+  color: #FFFFFF;
+}
+.archive-video-post .button.white {
+  font-size: 22px;
+  width: 100%;
+}
+
+.page-navigation li {
+  border: 2px solid #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-left: 0;
+  margin-right: 10px;
+}
+.page-navigation li a {
+  color: #FFFFFF;
+}
+.page-navigation li:hover {
+  background-color: #FFFFFF !important;
+  color: #000000;
+}
+.page-navigation li:hover a {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.page-navigation li.current {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.page-navigation li.current a {
+  color: #000000;
+}
+
+/**
+***************** A. Author ************************
 */
-span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic;
+.author-bio {
+  text-align: center;
+}
+.author-bio .mugshot {
+  margin-bottom: 10px;
+}
+.author-bio .mugshot img {
+  border-radius: 100px;
+}
+.author-bio .author-name {
+  font-family: 'Roboto Slab', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-transform: none;
+}
+.author-bio .bio {
+  font-size: 16px;
+  line-height: 1.4;
+}
+.author-bio a.button {
+  color: #FFFFFF !important;
+  width: 100%;
+}
+.author-bio a.button:hover {
+  color: #000000 !important;
 }
 
-/*********************
-CSS3 GRADIENTS.
-*********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
 /**
 ***************** VIII. Pages ************************
 */
 /**
 * Page Styles
 *
-* @package ***Theme Name***
+* @package VideoPlace
 * @author Jacob Martella
 * @version 1.0
 */
-/******************************************************************
-
-Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of Sass' great features:
-Mixins & Constants.
-
-******************************************************************/
-/*********************
-TOOLS
-*********************/
-.image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-/*********************
-COLORS
-*********************/
-/*********************
-TYPOGRAPHY
-*********************/
-/*	@font-face {
-    	font-family: 'Font Name';
-    	src: url('assets/fonts/font-name.eot');
-    	src: url('assets/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/font-name.woff') format('woff'),
-             url('assets/fonts/font-name.ttf') format('truetype'),
-             url('assets/fonts/font-name.svg#font-name') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
-*/
-span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic;
-}
-
-/*********************
-CSS3 GRADIENTS.
-*********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
 .page-post .article-header {
   padding-bottom: 15px;
-  border-bottom: 1px solid #fefefe;
+  border-bottom: 1px solid #FFFFFF;
   margin-bottom: 15px;
 }
 .page-post .article-header .flex-video {
@@ -6903,7 +6656,7 @@ CSS3 GRADIENTS.
   font-family: 'Roboto Slab', serif;
   font-size: 35px;
   font-weight: 400;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: none;
   text-align: center;
 }
@@ -6911,6 +6664,33 @@ CSS3 GRADIENTS.
 /**
 ***************** A. 404 ************************ 
 */
+.content-not-found {
+  background-color: rgba(216, 216, 216, 0.3);
+  padding: 10px 15px;
+}
+.content-not-found h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 150px;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.content-not-found h3 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-transform: none;
+}
+.content-not-found p {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-transform: none;
+}
+
 /**
 ***************** IX. Sidebars ************************
 */
@@ -6921,49 +6701,6 @@ CSS3 GRADIENTS.
 * @author Jacob Martella
 * @version 1.0
 */
-/******************************************************************
-
-Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of Sass' great features:
-Mixins & Constants.
-
-******************************************************************/
-/*********************
-TOOLS
-*********************/
-.image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-/*********************
-COLORS
-*********************/
-/*********************
-TYPOGRAPHY
-*********************/
-/*	@font-face {
-    	font-family: 'Font Name';
-    	src: url('assets/fonts/font-name.eot');
-    	src: url('assets/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/font-name.woff') format('woff'),
-             url('assets/fonts/font-name.ttf') format('truetype'),
-             url('assets/fonts/font-name.svg#font-name') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
-*/
-span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic;
-}
-
-/*********************
-CSS3 GRADIENTS.
-*********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
 /**
 ***************** A. Widgets ************************ 
 */
@@ -6979,10 +6716,10 @@ CSS3 GRADIENTS.
   font-family: 'Roboto', sans-serif;
   font-size: 26px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: uppercase;
   text-align: center;
-  border-bottom: 1px solid #fefefe;
+  border-bottom: 1px solid #FFFFFF;
 }
 .sidebar .widget a {
   color: #D8D8D8;
@@ -6998,51 +6735,8 @@ CSS3 GRADIENTS.
 * @author Jacob Martella
 * @version 1.0
 */
-/******************************************************************
-
-Stylesheet: Mixins & Constants Stylesheet
-
-This is where you can take advantage of Sass' great features:
-Mixins & Constants.
-
-******************************************************************/
-/*********************
-TOOLS
-*********************/
-.image-replacement {
-  text-indent: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-/*********************
-COLORS
-*********************/
-/*********************
-TYPOGRAPHY
-*********************/
-/*	@font-face {
-    	font-family: 'Font Name';
-    	src: url('assets/fonts/font-name.eot');
-    	src: url('assets/fonts/font-name.eot?#iefix') format('embedded-opentype'),
-             url('assets/fonts/font-name.woff') format('woff'),
-             url('assets/fonts/font-name.ttf') format('truetype'),
-             url('assets/fonts/font-name.svg#font-name') format('svg');
-    	font-weight: normal;
-    	font-style: normal;
-	}
-*/
-span.amp {
-  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
-  font-style: italic;
-}
-
-/*********************
-CSS3 GRADIENTS.
-*********************/
-/* @include css-gradient(#dfdfdf,#f8f8f8); */
 .footer {
-  background-color: #0a0a0a;
+  background-color: #000000;
   padding: 20px 0;
 }
 .footer .footer-info {
@@ -7057,7 +6751,7 @@ CSS3 GRADIENTS.
   font-size: 20px;
 }
 .footer .footer-info h3 a {
-  color: #fefefe;
+  color: #FFFFFF;
 }
 .footer .footer-info h3 a:hover {
   color: #6E6E6E;
@@ -7070,13 +6764,13 @@ CSS3 GRADIENTS.
   font-family: 'Roboto', sans-serif;
   font-size: 24px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: uppercase;
   text-align: center;
-  border-bottom: 1px solid #fefefe;
+  border-bottom: 1px solid #FFFFFF;
 }
 .footer .footer-column label {
-  color: #fefefe;
+  color: #FFFFFF;
 }
 .footer .footer-column ul li {
   display: block;
@@ -7084,11 +6778,11 @@ CSS3 GRADIENTS.
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: #fefefe;
+  color: #FFFFFF;
   text-transform: uppercase;
 }
 .footer .footer-column ul li a {
-  color: #fefefe;
+  color: #FFFFFF;
 }
 .footer .footer-column ul li ul {
   margin-left: 10px;
@@ -7099,6 +6793,6 @@ CSS3 GRADIENTS.
   line-height: 1;
 }
 .footer .footer-column:nth-child(2) {
-  border-left: 1px solid #fefefe;
-  border-right: 1px solid #fefefe;
+  border-left: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
 }
