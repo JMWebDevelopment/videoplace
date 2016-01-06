@@ -12,7 +12,7 @@
 		return;
 	}
 ?>
-
+<?php if (comments_open()) { ?>
 <div id="comments" class="comments-area">
 
 	<?php // You can start editing here ?>
@@ -68,3 +68,4 @@
 	<?php comment_form(array('class_submit'=>'button')); ?>
 
 </div><!-- #comments -->
+<?php } ?>

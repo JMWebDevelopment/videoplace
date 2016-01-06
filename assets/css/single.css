@@ -22,7 +22,7 @@
 }
 .video-top .article-details .article-header {
   background-color: rgba(216, 216, 216, 0.3);
-  height: 439.594px;
+  min-height: 439.594px;
   padding: 10px 15px;
 }
 .video-top .article-details .article-header .entry-title {
@@ -81,6 +81,23 @@
   background-color: rgba(110, 110, 110, 0.3);
   padding: 10px 15px;
   margin-bottom: 15px;
+}
+.post-more .entry-content blockquote {
+  border-left: 2px solid #FFFFFF;
+  padding-bottom: 0.5625rem;
+}
+.post-more .entry-content blockquote p {
+  color: #D8D8D8;
+}
+.post-more .entry-content cite {
+  color: #D8D8D8;
+}
+.post-more .entry-content tbody, .post-more .entry-content thead {
+  border: 0;
+}
+.post-more .entry-content pre {
+  color: #252525;
+  border: 0;
 }
 
 .related-posts {
@@ -142,4 +159,29 @@
 .related-posts .video-post .button.white {
   font-size: 22px;
   width: 100%;
+}
+
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  .video-top .video {
+    padding-left: 0.625rem;
+  }
+  .video-top .article-details {
+    padding-right: 0.625rem;
+  }
+
+  .post-more {
+    padding-left: 0.625rem;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .video-top .video {
+    padding-left: 0.9375rem;
+  }
+  .video-top .article-details {
+    padding-right: 0.9375rem;
+  }
+
+  .post-more {
+    padding-left: 0.9375rem;
+  }
 }

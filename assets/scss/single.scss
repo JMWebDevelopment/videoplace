@@ -24,7 +24,7 @@
     padding-right: 0;
     .article-header {
       background-color: rgba($grey, .30);
-      height: 439.594px;
+      min-height: 439.594px;
       padding: 10px 15px;
       .entry-title {
         @include robotoSlab(30px, 400, $white, none);
@@ -71,6 +71,23 @@
     background-color: rgba($dark-grey, .30);
     padding: 10px 15px;
     margin-bottom: 15px;
+    blockquote {
+      border-left: 2px solid $white;
+      padding-bottom: 0.5625rem;
+      p {
+        color: $grey;
+      }
+    }
+    cite {
+      color: $grey;
+    }
+    tbody, thead {
+      border: 0;
+    }
+    pre {
+      color: $off-black;
+      border: 0;
+    }
   }
 }
 .related-posts {
@@ -119,10 +136,34 @@
 }
 
 @media #{$small-up} { }
-@media #{$small-only} { }
+@media #{$small-only} {
+  .video-top {
+    .video {
+      padding-left: 0.625rem;
+    }
+    .article-details {
+      padding-right: 0.625rem;
+    }
+  }
+  .post-more {
+    padding-left: 0.625rem;
+  }
+}
 
 @media #{$medium-up} { }
-@media #{$medium-only} { }
+@media #{$medium-only} {
+  .video-top {
+    .video {
+      padding-left: 0.9375rem;
+    }
+    .article-details {
+      padding-right: 0.9375rem;
+    }
+  }
+  .post-more {
+    padding-left: 0.9375rem;
+  }
+}
 
 @media #{$large-up} { }
 @media #{$large-only} { }

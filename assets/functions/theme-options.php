@@ -10,44 +10,36 @@
  */
 
 //* Create the general settings section
-function theme_slug_general_customizer( $wp_customize ) {
+function videoplace_general_customizer( $wp_customize ) {
 	$wp_customize->add_section(
 		'general',
 		array(
-			'title' => __('Theme Settings', 'theme-slug'),
-			'description' => __('These are the theme options.', 'theme-slug'),
+			'title' => __('VideoPlace Settings', 'videoplace'),
+			'description' => __('These are the theme options for VideoPlace.', 'videoplace'),
 			'priority' => 35,
 		)
 	);
 
-	//* Get the categories for the home page options
-	$cats = get_categories();
-	$cat_args['none'] = __('None', 'fotographia');
-	foreach($cats as $cat) {
-		$cat_args[$cat->term_id] = $cat->name;
-	}
-
 	//* Home Slider Category
 	$wp_customize->add_setting(
-		'theme-slug-home-slider-cat',
+		'videoplace-show-sticky-post',
 		array(
-			'default' => 'None',
-			'sanitize_callback' => 'theme_slug_sanitize_category',
+			'default' => '',
+			'sanitize_callback' => 'videoplace_sanitize_checkbox',
 		)
 	);
 
 	$wp_customize->add_control(
-		'theme-slug-home-slider-cat',
+		'videoplace-show-sticky-post',
 		array(
-			'label' => __('Home Slider Category', 'theme-slug'),
+			'label' => __('Show Latest Sticky Post at top of home page: ', 'theme-slug'),
 			'section' => 'general',
-			'type' => 'select',
-			'choices' => $cat_args
+			'type' => 'checkbox',
 		)
 	);
 
 }
-add_action( 'customize_register', 'theme_slug_general_customizer' );
+add_action( 'customize_register', 'videoplace_general_customizer' );
 
 
 //* Sanitize Links
@@ -63,7 +55,7 @@ function theme_slug_sanitize_select( $input, $setting ) {
 }
 
 //* Sanitize Checkboxes
-function theme_slug_sanitize_checkbox( $input ) {
+function videoplace_sanitize_checkbox( $input ) {
 	return ( ( isset( $input ) && true == $input ) ? 1 : 0 );
 }
 

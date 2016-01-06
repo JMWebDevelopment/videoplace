@@ -7,7 +7,7 @@
  * @version  1.0
  */
 ?>
-<div id="sidebar1" class="sidebar large-4 medium-4 columns" role="complementary">
+<div id="sidebar1" class="sidebar large-4 medium-12 small-12 columns" role="complementary">
 
 	<?php
 	if (is_author()) { ?>

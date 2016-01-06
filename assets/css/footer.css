@@ -66,3 +66,16 @@
   border-left: 1px solid #FFFFFF;
   border-right: 1px solid #FFFFFF;
 }
+
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  .footer .footer-column {
+    border-bottom: 1px solid #FFFFFF;
+  }
+  .footer .footer-column:nth-child(2) {
+    border-left: 0;
+    border-right: 0;
+  }
+  .footer .footer-column:last-child {
+    border-bottom: 0;
+  }
+}

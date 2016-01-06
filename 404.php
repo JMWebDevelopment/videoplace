@@ -13,7 +13,7 @@
 
 		<div id="inner-content" class="row">
 	
-			<main id="main" class="large-8 medium-8 columns" role="main">
+			<main id="main" class="large-8 medium-12 small-12 columns" role="main">
 
 				<article id="content-not-found">
 				

@@ -19,11 +19,11 @@
 
 			    <article id="post-<?php the_ID(); ?>" <?php post_class('row video-top'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-				    <div class="video large-8 medium-8 small-12 columns">
+				    <div class="video large-8 medium-12 small-12 columns">
 				        <?php echo videoplace_get_first_embed_media($post->ID); ?>
 				    </div>
 
-				    <div class="large-4 medium-4 small-12 columns article-details">
+				    <div class="large-4 medium-12 small-12 columns article-details">
 					    <header class="article-header">
 						    <h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 						    <div class="post-details clearfix">
@@ -39,7 +39,7 @@
 			    </article> <!-- end article -->
 
 			    <div class="row">
-				    <div class="post-more large-8 medium-8 small-12 columns">
+				    <div class="post-more large-8 medium-12 small-12 columns">
 					    <section class="entry-content" itemprop="articleBody">
 						    <?php the_post_thumbnail('full'); ?>
 						    <?php echo videoplace_get_content($post->ID); ?>

@@ -6195,14 +6195,19 @@ D. Gallery
   font-weight: 300;
   color: #fefefe;
   text-transform: none;
-  margin-top: 10px;
+  margin-top: -2px;
 }
 #top-post .columns.details .post-details .post-detail a {
   color: #fefefe;
 }
+#top-post .columns.details p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
 #top-post .columns.details .button.white {
   font-size: 22px;
   width: 100%;
+  padding: 5px 15px;
 }
 #top-post .columns .flex-video {
   padding-bottom: 56%;
@@ -6268,6 +6273,32 @@ D. Gallery
   width: 100%;
 }
 
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  #top-post {
+    background-color: rgba(216, 216, 216, 0.3);
+    margin-top: 15px;
+  }
+  #top-post .medium-12 {
+    padding: 0;
+  }
+
+  .home-posts-section .home-posts {
+    padding-left: 0.625rem;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  #top-post {
+    background-color: rgba(216, 216, 216, 0.3);
+    margin-top: 15px;
+  }
+  #top-post .medium-12 {
+    padding: 0;
+  }
+
+  .home-posts-section .home-posts {
+    padding-left: 0.9375rem;
+  }
+}
 /**
 ***************** IV. Single ************************
 */
@@ -6295,7 +6326,7 @@ D. Gallery
 }
 .video-top .article-details .article-header {
   background-color: rgba(216, 216, 216, 0.3);
-  height: 439.594px;
+  min-height: 439.594px;
   padding: 10px 15px;
 }
 .video-top .article-details .article-header .entry-title {
@@ -6354,6 +6385,23 @@ D. Gallery
   background-color: rgba(110, 110, 110, 0.3);
   padding: 10px 15px;
   margin-bottom: 15px;
+}
+.post-more .entry-content blockquote {
+  border-left: 2px solid #FFFFFF;
+  padding-bottom: 0.5625rem;
+}
+.post-more .entry-content blockquote p {
+  color: #D8D8D8;
+}
+.post-more .entry-content cite {
+  color: #D8D8D8;
+}
+.post-more .entry-content tbody, .post-more .entry-content thead {
+  border: 0;
+}
+.post-more .entry-content pre {
+  color: #252525;
+  border: 0;
 }
 
 .related-posts {
@@ -6417,6 +6465,30 @@ D. Gallery
   width: 100%;
 }
 
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  .video-top .video {
+    padding-left: 0.625rem;
+  }
+  .video-top .article-details {
+    padding-right: 0.625rem;
+  }
+
+  .post-more {
+    padding-left: 0.625rem;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .video-top .video {
+    padding-left: 0.9375rem;
+  }
+  .video-top .article-details {
+    padding-right: 0.9375rem;
+  }
+
+  .post-more {
+    padding-left: 0.9375rem;
+  }
+}
 /**
 ***************** V. Comments ************************
 */
@@ -6697,7 +6769,7 @@ D. Gallery
 /**
 * Sidebar Styles
 *
-* @package ***Theme Name***
+* @package VideoPlace
 * @author Jacob Martella
 * @version 1.0
 */
@@ -6706,6 +6778,12 @@ D. Gallery
 */
 .sidebar {
   padding-right: 0;
+  /**
+  ***************** B. Tags ************************
+  */
+  /**
+  ***************** C. Calendar ************************
+  */
 }
 .sidebar .widget {
   background-color: rgba(216, 216, 216, 0.3);
@@ -6724,7 +6802,160 @@ D. Gallery
 .sidebar .widget a {
   color: #D8D8D8;
 }
+.sidebar .tagcloud a {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px !important;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin: 1px;
+  padding: 5px;
+  display: inline-block;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+}
+.sidebar .tagcloud a:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+  display: inline-block;
+}
+.sidebar #wp-calendar {
+  width: 100%;
+  background-color: transparent;
+  margin-bottom: 0px;
+  border: 0;
+}
+.sidebar #wp-calendar caption {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 3px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+.sidebar #wp-calendar thead {
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background: transparent;
+  border: 0px;
+}
+.sidebar #wp-calendar thead tr {
+  background-color: transparent !important;
+  color: #FFFFFF;
+  border: 0px;
+}
+.sidebar #wp-calendar thead th {
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  text-align: center;
+  background-color: transparent !important;
+  color: #FFFFFF;
+  border-right: 0px;
+}
+.sidebar #wp-calendar tbody {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 0px;
+}
+.sidebar #wp-calendar tbody tr {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background-color: transparent !important;
+  border: 0px;
+}
+.sidebar #wp-calendar tbody tr a {
+  color: #FFFFFF !important;
+  cursor: pointer;
+}
+.sidebar #wp-calendar tbody td {
+  text-align: center;
+  padding: 8px;
+  border: 0px;
+  border-radius: 2px;
+  background-color: transparent;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.sidebar #wp-calendar tbody td:hover, .sidebar #wp-calendar tbody td:hover, .sidebar #wp-calendar tbody td:hover > a {
+  color: #AAAAAA;
+}
+.sidebar #wp-calendar tbody #today {
+  background-color: #FFFFFF !important;
+  color: #252525;
+}
+.sidebar #wp-calendar tbody #today a {
+  color: #252525 !important;
+  cursor: pointer;
+}
+.sidebar #wp-calendar tbody #today a:hover {
+  color: #FFFFFF !important;
+}
+.sidebar #wp-calendar tbody #today:hover {
+  background-color: transparent !important;
+  color: #FFFFFF;
+}
+.sidebar #wp-calendar tbody #today:hover > a {
+  color: #FFFFFF !important;
+}
+.sidebar #wp-calendar tbody .pad {
+  background: none;
+}
+.sidebar #wp-calendar tfoot {
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 0;
+}
+.sidebar #wp-calendar tfoot td {
+  border: 0px;
+}
+.sidebar #wp-calendar tfoot td:hover, .sidebar #wp-calendar tfoot td a:hover, .sidebar #wp-calendar tfoot td:hover > a {
+  background-color: transparent;
+  color: #AAAAAA;
+}
+.sidebar #wp-calendar tfoot tr {
+  background-color: transparent !important;
+  color: #FFFFFF;
+  border-top: 0;
+}
+.sidebar #wp-calendar tfoot a {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.sidebar #wp-calendar tfoot #next, .sidebar #wp-calendar tfoot #prev {
+  font-family: 'Roboto Slab', serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-align: center;
+}
 
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  .sidebar {
+    padding-right: 0.625rem;
+  }
+}
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .sidebar {
+    padding-right: 0.9375rem;
+  }
+}
 /**
 ***************** X. Footer ************************
 */
@@ -6795,4 +7026,17 @@ D. Gallery
 .footer .footer-column:nth-child(2) {
   border-left: 1px solid #FFFFFF;
   border-right: 1px solid #FFFFFF;
+}
+
+@media screen and (min-width: 0em) and (max-width: 39.9375em) {
+  .footer .footer-column {
+    border-bottom: 1px solid #FFFFFF;
+  }
+  .footer .footer-column:nth-child(2) {
+    border-left: 0;
+    border-right: 0;
+  }
+  .footer .footer-column:last-child {
+    border-bottom: 0;
+  }
 }

@@ -13,18 +13,26 @@
 
 		<div class="row" id="top-post">
 			<?php
-				$top_post_args = array(
-					'posts_per_page' => 1,
-					'ignore_sticky_posts' => true
-				);
+				if (esc_attr(get_theme_mod('videoplace-show-sticky-post')) == 1) {
+					$top_post_args = array(
+						'posts_per_page'      => 1,
+						'post__in'            => get_option( 'sticky_posts' ),
+						'ignore_sticky_posts' => 1,
+					);
+				} else {
+					$top_post_args = array(
+						'posts_per_page'      => 1,
+						'ignore_sticky_posts' => true
+					);
+				}
 				$top_post = new WP_Query($top_post_args);
 				if ($top_post->have_posts()) : while ($top_post->have_posts()) : $top_post->the_post(); $do_not_duplicate[] = $post->ID;
 			?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<div class="large-7 medium-7 small-12 columns">
+					<div class="large-8 medium-12 small-12 columns">
 						<?php echo videoplace_get_first_embed_media($post->ID); ?>
 					</div>
-					<div class="details large-5 medium-5 small-12 columns">
+					<div class="details large-4 medium-12 small-12 columns">
 						<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 						<div class="post-details clearfix">
 							<?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?>
@@ -39,7 +47,7 @@
 
 		<div id="inner-content" class="row home-posts-section">
 
-			<div class="home-posts large-8 medium-8 small-12 columns">
+			<div class="home-posts large-8 medium-12 small-12 columns">
 				<?php
 					$home_args = array(
 						'posts_per_page' => 10,
