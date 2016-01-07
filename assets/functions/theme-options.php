@@ -20,7 +20,7 @@ function videoplace_general_customizer( $wp_customize ) {
 		)
 	);
 
-	//* Home Slider Category
+	//* Show Sticky Post on Homepage
 	$wp_customize->add_setting(
 		'videoplace-show-sticky-post',
 		array(
@@ -32,10 +32,28 @@ function videoplace_general_customizer( $wp_customize ) {
 	$wp_customize->add_control(
 		'videoplace-show-sticky-post',
 		array(
-			'label' => __('Show Latest Sticky Post at top of home page: ', 'theme-slug'),
+			'label' => __('Show Latest Sticky Post at top of home page: ', 'videoplace'),
 			'section' => 'general',
 			'type' => 'checkbox',
 		)
+	);
+
+	//* Number of Posts on Home Page
+	$wp_customize->add_setting(
+			'videoplace-home-post-num',
+			array(
+					'default' => '',
+					'sanitize_callback' => 'videoplace_sanitize_num',
+			)
+	);
+
+	$wp_customize->add_control(
+			'videoplace-home-post-num',
+			array(
+					'label' => __('Number of posts to show on homepage: ', 'videoplace'),
+					'section' => 'general',
+					'type' => 'text',
+			)
 	);
 
 }
@@ -67,7 +85,7 @@ function theme_slug_sanitize_category( $input, $setting ) {
 }
 
 //* Sanitize Numbers
-function theme_slug_sanitize_num($input, $setting) {
+function videoplace_sanitize_num($input, $setting) {
 	$number = absint( $input );
 	return ( $input ? $input : $setting->default );
 }

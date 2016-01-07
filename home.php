@@ -49,8 +49,9 @@
 
 			<div class="home-posts large-8 medium-12 small-12 columns">
 				<?php
+					if (esc_attr(get_theme_mod('videoplace-home-post-num'))) { $home_num = esc_attr(get_theme_mod('videoplace-home-post-num')); } else { $home_num = 10; }
 					$home_args = array(
-						'posts_per_page' => 10,
+						'posts_per_page' => $home_num,
 						'post__not_in' => $do_not_duplicate
 					);
 					$home_posts = new WP_Query($home_args);
