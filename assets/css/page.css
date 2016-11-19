@@ -27,6 +27,27 @@
   text-transform: none;
   text-align: center;
 }
+.page-post .flex-video {
+  padding-bottom: 56%;
+  margin: 0;
+}
+.page-post blockquote {
+  border-left: 2px solid #FFFFFF;
+  padding-bottom: 0.5625rem;
+}
+.page-post blockquote p {
+  color: #D8D8D8;
+}
+.page-post cite {
+  color: #D8D8D8;
+}
+.page-post tbody, .page-post thead {
+  border: 0;
+}
+.page-post pre {
+  color: #252525;
+  border: 0;
+}
 
 /**
 ***************** A. 404 ************************ 

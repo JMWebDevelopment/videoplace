@@ -54,6 +54,13 @@ D. Gallery
 .gallery-icon img  { padding: 4px; }
 .gallery-caption  { font-size: 12px; }
 
+/*
+E. Screen Reader Text
+------------------------------------------- */
+.screen-reader-text {
+  font-size: 16px;
+}
+
 @media #{$small-up} { }
 @media #{$small-only} { }
 

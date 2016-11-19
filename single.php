@@ -4,7 +4,7 @@
  *
  * @package VideoPlace
  * @author  Jacob Martella
- * @version  1.0
+ * @version  1.1
  */
 ?>
 <?php get_header(); ?>
@@ -15,12 +15,12 @@
 
 		<main id="main" class="large-12 medium-12 columns" role="main">
 		
-		    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-			    <article id="post-<?php the_ID(); ?>" <?php post_class('row video-top'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+			    <article id="post-<?php the_ID(); ?>" <?php post_class( 'row video-top' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 				    <div class="video large-8 medium-12 small-12 columns">
-				        <?php echo videoplace_get_first_embed_media($post->ID); ?>
+				        <?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
 				    </div>
 
 				    <div class="large-4 medium-12 small-12 columns article-details">
@@ -28,7 +28,7 @@
 						    <h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 						    <div class="post-details clearfix">
 							    <?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?>
-							    <h4 class="post-detail"><?php echo __('Posted by ', 'videoplace'); the_author_posts_link(); echo __(' on ', 'videoplace'); the_date('F j, Y'); ?></h4>
+							    <h4 class="post-detail"><?php echo __( 'Posted by ', 'videoplace' ); the_author_posts_link(); echo __( ' on ', 'videoplace' ); the_date( get_option( 'date_format' ) ); ?></h4>
 						    </div>
 						    <?php the_excerpt(); ?>
 						    <p class="tags"><?php the_tags('<span class="the-tag">', '</span><span class="the-tag">', '</span>'); ?></p>	</footer> <!-- end article footer -->
@@ -41,8 +41,7 @@
 			    <div class="row">
 				    <div class="post-more large-8 medium-12 small-12 columns">
 					    <section class="entry-content" itemprop="articleBody">
-						    <?php the_post_thumbnail('full'); ?>
-						    <?php echo videoplace_get_content($post->ID); ?>
+							<?php the_content(); ?>
 					    </section> <!-- end article section -->
 
 					    <?php comments_template(); ?>

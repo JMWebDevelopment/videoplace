@@ -1,9 +1,9 @@
 /**
 * Editor Styles
 *
-* @package ***Theme Name***
+* @package VideoPlace
 * @author Jacob Martella
-* @version 1.0
+* @version 1.1
 */
 /**
 * WordPress Classes Styles
@@ -22,16 +22,14 @@
 A. By Author
 ------------------------------------------- */
 .bypostauthor {
-  background-color: #AFAFAF;
-}
+  background-color: #AFAFAF; }
 
 /*
 B. Sticky
 ------------------------------------------- */
 .sticky {
   background-color: #AFAFAF;
-  position: relative;
-}
+  position: relative; }
 
 /*
 C. Photos
@@ -45,8 +43,7 @@ C. Photos
   max-width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .alignright {
   float: right;
@@ -57,8 +54,7 @@ C. Photos
   max-width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .alignleft {
   float: left;
@@ -69,8 +65,7 @@ C. Photos
   max-width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .alignnone {
   float: left;
@@ -81,72 +76,66 @@ C. Photos
   max-width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 .floatleft {
-  float: left;
-}
+  float: left; }
 
 .floatright {
-  float: right;
-}
+  float: right; }
 
 p.wp-caption-text {
   font-family: Arial;
-  font-size: 12px;
-}
+  font-size: 12px; }
 
 /*
 D. Gallery
 ------------------------------------------- */
 .gallery {
   clear: both;
-  margin: 10px 0;
-}
+  margin: 10px 0; }
 
 .gallery-item {
   float: left;
   margin-right: 10px;
   width: 31%;
-  text-align: center;
-}
+  text-align: center; }
 
 .gallery-icon img {
-  padding: 4px;
-}
+  padding: 4px; }
 
 .gallery-caption {
-  font-size: 12px;
-}
+  font-size: 12px; }
+
+/*
+E. Screen Reader Text
+------------------------------------------- */
+.screen-reader-text {
+  font-size: 16px; }
 
 /**
 * Theme Default Styles
 *
-* @package ***Theme Name***
+* @package VideoPlace
 * @author Jacob Martella
 * @version 1.0
 */
 textarea {
   overflow: auto;
-  vertical-align: top;
-}
+  vertical-align: top; }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
 .off-canvas-content, .off-canvas-content {
-  background: transparent;
-}
+  background: transparent; }
 
 /*
 B. Typographical Elements
 ------------------------------------------- */
 html {
-  font-size: 100%;
-}
+  font-size: 100%; }
 
 body {
   font-family: 'Playfair Display', serif;
@@ -155,8 +144,7 @@ body {
   color: #FFFFFF;
   text-transform: none;
   margin: 0px;
-  background-color: #252525;
-}
+  background-color: #252525; }
 
 a,
 button,
@@ -170,53 +158,43 @@ textarea:focus,
   -moz-transition: all 0.1s ease-in-out;
   -ms-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
+  transition: all 0.1s ease-in-out; }
 
 ::-moz-selection {
   background-color: #000000;
-  color: #ffffff;
-}
+  color: #ffffff; }
 
 ::selection {
   background-color: #000000;
-  color: #ffffff;
-}
+  color: #ffffff; }
 
 a, a:link, a:visited, a:hover {
   color: #D8D8D8;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 a img {
-  border: 0px;
-}
+  border: 0px; }
 
 a:hover {
-  color: #FFFFFF;
-}
+  color: #FFFFFF; }
 
 p {
   font-family: 'Playfair Display', serif;
   font-size: 18px;
   font-weight: 400;
   color: #FFFFFF;
-  text-transform: none;
-}
+  text-transform: none; }
 
 strong {
-  font-weight: 700;
-}
+  font-weight: 700; }
 
 ol,
 ul {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 label {
-  color: #FFFFFF;
-}
+  color: #FFFFFF; }
 
 /*
 C. Headings
@@ -227,8 +205,7 @@ h6 {
   font-weight: 300;
   color: #D8D8D8;
   text-transform: uppercase;
-  margin: 3px;
-}
+  margin: 3px; }
 
 h5 {
   font-family: 'Roboto Slab', serif;
@@ -236,8 +213,7 @@ h5 {
   font-weight: 300;
   color: #D8D8D8;
   text-transform: uppercase;
-  margin: 3px;
-}
+  margin: 3px; }
 
 h4 {
   font-family: 'Roboto Slab', serif;
@@ -245,8 +221,7 @@ h4 {
   font-weight: 300;
   color: #D8D8D8;
   text-transform: uppercase;
-  margin: 3px;
-}
+  margin: 3px; }
 
 h3 {
   font-family: 'Roboto', sans-serif;
@@ -254,8 +229,7 @@ h3 {
   font-weight: 300;
   color: #D8D8D8;
   text-transform: uppercase;
-  margin: 4px;
-}
+  margin: 4px; }
 
 h2 {
   font-family: 'Roboto', sans-serif;
@@ -263,8 +237,7 @@ h2 {
   font-weight: 300;
   color: #D8D8D8;
   text-transform: none;
-  margin: 4px;
-}
+  margin: 4px; }
 
 h1 {
   font-family: 'Roboto', sans-serif;
@@ -272,8 +245,7 @@ h1 {
   font-weight: 300;
   color: #D8D8D8;
   text-transform: none;
-  margin: 5px;
-}
+  margin: 5px; }
 
 /*
 D. Objects
@@ -284,14 +256,12 @@ img,
 object,
 video,
 .wp-caption {
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 img {
   height: auto;
   width: auto;
-  /* IE8 */
-}
+  /* IE8 */ }
 
 /*
 E. Forms
@@ -306,23 +276,19 @@ textarea {
   padding: 3px;
   max-width: 100%;
   margin-top: 5px;
-  margin-bottom: 5px;
-}
+  margin-bottom: 5px; }
 
 input:focus,
 textarea:focus {
   border: 1px solid #000000;
-  outline: none;
-}
+  outline: none; }
 
 ::-moz-placeholder {
   color: #000000;
-  opacity: 1;
-}
+  opacity: 1; }
 
 ::-webkit-input-placeholder {
-  color: #000000;
-}
+  color: #000000; }
 
 button,
 input[type="button"],
@@ -339,27 +305,24 @@ input[type="submit"],
   cursor: pointer;
   width: auto;
   margin-top: 5px;
-  margin-bottom: 5px;
-}
-button a,
-input[type="button"] a,
-input[type="reset"] a,
-input[type="submit"] a,
-.button a, .button a {
-  color: #FFFFFF;
-}
-button.white,
-input[type="button"].white,
-input[type="reset"].white,
-input[type="submit"].white,
-.button.white, .button.white {
-  border: 2px solid #FFFFFF;
-  background-color: transparent;
-  color: #FFFFFF;
-  border-radius: 2px;
-  padding: 10px 15px;
-  text-align: center;
-}
+  margin-bottom: 5px; }
+  button a,
+  input[type="button"] a,
+  input[type="reset"] a,
+  input[type="submit"] a,
+  .button a, .button a {
+    color: #FFFFFF; }
+  button.white,
+  input[type="button"].white,
+  input[type="reset"].white,
+  input[type="submit"].white,
+  .button.white, .button.white {
+    border: 2px solid #FFFFFF;
+    background-color: transparent;
+    color: #FFFFFF;
+    border-radius: 2px;
+    padding: 10px 15px;
+    text-align: center; }
 
 button:hover,
 input:hover[type="button"],
@@ -368,25 +331,20 @@ input:hover[type="submit"],
 .button:hover,
 .button:hover {
   background-color: #FFFFFF;
-  color: #000000;
-}
+  color: #000000; }
 
 .button:hover {
-  color: #000000;
-}
+  color: #000000; }
 
 .button {
-  display: inline-block;
-}
+  display: inline-block; }
 
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button {
-  display: none;
-}
+  display: none; }
 
 input[type="checkbox"], input[type="radio"] {
-  margin-right: 5px;
-}
+  margin-right: 5px; }
 
 /*
 F. Tables
@@ -398,61 +356,58 @@ table {
   margin-bottom: 40px;
   margin-bottom: 4rem;
   width: 100%;
-  border: 1px solid #000000;
-}
+  border: 1px solid #000000; }
 
 tbody a {
-  color: #ffffff !important;
-}
+  color: #ffffff !important; }
 
 tr {
-  border-top: 1px solid #000000;
-}
+  border-top: 1px solid #000000; }
 
 th,
 td {
-  text-align: left;
-}
+  text-align: left; }
 
 thead th {
   background-color: #252525;
   color: #ffffff;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  padding: 2px 0;
-}
+  padding: 2px 0; }
 
 tbody tr:nth-child(odd) {
-  background-color: #999999;
-}
+  background-color: #999999; }
 
 tbody tr:nth-child(even) {
-  background-color: #666666;
-}
+  background-color: #666666; }
 
 th {
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 td {
-  padding: 2px 0;
-}
+  padding: 2px 0; }
 
 /*
 H. Lists
 ------------------------------------------- */
 ul > li {
-  margin-left: 10px;
-}
+  margin-left: 10px; }
 
 ol > li {
-  margin-left: 10px;
-}
+  margin-left: 10px; }
 
 ul, ol {
-  list-style-position: inside;
-}
+  list-style-position: inside; }
 
 html {
-  padding: 2.5% 2.5%;
-}
+  padding: 2.5% 2.5%; }
+
+body {
+  background-color: #FFFFFF;
+  color: #000000; }
+
+p {
+  color: #000000; }
+
+h1, h2, h3, h4, h5, h6, a {
+  color: #6E6E6E; }

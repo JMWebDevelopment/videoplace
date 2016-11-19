@@ -1,7 +1,7 @@
 /**
 * Single Post Styles
 *
-* @package ***Theme Name***
+* @package VideoPlace
 * @author Jacob Martella
 * @version 1.0
 */
@@ -99,10 +99,15 @@
   color: #252525;
   border: 0;
 }
+.post-more .entry-content .flex-video {
+  padding-bottom: 56%;
+  margin: 0;
+}
 
 .related-posts {
   background-color: rgba(110, 110, 110, 0.3);
   padding: 10px 10px;
+  margin-bottom: 15px;
 }
 .related-posts h4 {
   font-family: 'Roboto Slab', serif;
@@ -167,6 +172,10 @@
   }
   .video-top .article-details {
     padding-right: 0.625rem;
+  }
+  .video-top .article-details .article-header {
+    min-height: initial;
+    height: auto;
   }
 
   .post-more {

@@ -2,9 +2,9 @@
 /**
  * Comments.php
  *
- * @package ***Theme Name***
+ * @package VideoPlace
  * @author  Jacob Martella
- * @version  1.0
+ * @version  1.1
  */
 ?>
 <?php
@@ -41,7 +41,7 @@
 		<?php endif; // Check for comment navigation. ?>
 
 		<ol class="commentlist">
-			<?php wp_list_comments('type=comment&callback=videoplace_comments'); ?>
+			<?php wp_list_comments( 'type=comment&callback=videoplace_comments' ); ?>
 		</ol>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>

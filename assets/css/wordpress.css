@@ -112,3 +112,10 @@ D. Gallery
 .gallery-caption {
   font-size: 12px;
 }
+
+/*
+E. Screen Reader Text
+------------------------------------------- */
+.screen-reader-text {
+  font-size: 16px;
+}

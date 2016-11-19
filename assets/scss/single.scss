@@ -1,7 +1,7 @@
 /**
 * Single Post Styles
 *
-* @package ***Theme Name***
+* @package VideoPlace
 * @author Jacob Martella
 * @version 1.0
 */
@@ -88,11 +88,16 @@
       color: $off-black;
       border: 0;
     }
+    .flex-video {
+      padding-bottom: 56%;
+      margin: 0;
+    }
   }
 }
 .related-posts {
   background-color: rgba($dark-grey, .30);
   padding: 10px 10px;
+  margin-bottom: 15px;
   h4 {
     @include robotoSlab(30px, 400, $white, uppercase);
     border-bottom: 1px solid $white;
@@ -143,6 +148,10 @@
     }
     .article-details {
       padding-right: 0.625rem;
+      .article-header {
+        min-height: initial;
+        height: auto;
+      }
     }
   }
   .post-more {

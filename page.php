@@ -4,7 +4,7 @@
  *
  * @package VideoPlace
  * @author  Jacob Martella
- * @version  1.0
+ * @version  1.1
  */
 ?>
 <?php get_header(); ?>
@@ -15,17 +15,19 @@
 	
 		    <main id="main" class="large-8 medium-12 small-12 columns" role="main">
 				
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class('page-post'); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
+					<article id="post-<?php the_ID(); ?>" <?php post_class( 'page-post' ); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
 
-						<header class="article-header">
-							<?php echo videoplace_get_first_embed_media($post->ID); ?>
-						</header> <!-- end article header -->
+						<?php if ( hybrid_media_grabber() ) { ?>
+							<header class="article-header">
+								<?php echo hybrid_media_grabber(); ?>
+							</header> <!-- end article header -->
+						<?php } ?>
 
 						<section class="entry-content" itemprop="articleBody">
 							<h1 class="page-title"><?php the_title(); ?></h1>
-							<?php echo videoplace_get_content($post->ID); ?>
+							<?php the_content(); ?>
 							<?php wp_link_pages(); ?>
 						</section> <!-- end article section -->
 

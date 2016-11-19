@@ -1,7 +1,7 @@
 /**
 * Header Styles
 *
-* @package ***Theme Name***
+* @package VideoPlace
 * @author Jacob Martella
 * @version 1.0
 */
@@ -54,7 +54,7 @@
 .header .top-bar ul .menu-item:hover {
   border-bottom: 3px solid #6E6E6E;
 }
-.header .top-bar ul .menu-item:hover a {
+.header .top-bar ul .menu-item:hover > a {
   color: #6E6E6E;
 }
 .header .top-bar ul .menu-item.current-menu-item {
@@ -81,7 +81,7 @@
   color: #FFFFFF;
 }
 .header .top-bar ul .menu-item ul li a:hover {
-  color: #FFFFFF;
+  color: #6E6E6E;
 }
 .header .top-bar ul .menu-item ul li a:after {
   content: '';
@@ -106,6 +106,55 @@
   display: none !important;
   border-color: #6E6E6E transparent transparent !important;
   top: 22px !important;
+}
+
+/**
+***************** D. Social Media Links ************************
+*/
+.header .top-bar .dashicons-plus {
+  width: 45px;
+  height: 36px;
+  font-size: 40px;
+  margin-top: 5px;
+}
+.header .top-bar .social-link {
+  width: 40px;
+  height: 40px;
+  margin-top: 5px;
+  margin-right: 10px;
+  display: inline-block;
+}
+.header .top-bar .social-link img {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.header .top-bar .social-link:hover {
+  opacity: .65;
+}
+.header .top-bar .social-link:nth-child(1) {
+  margin-top: 0;
+}
+.header .top-bar .social-link:nth-child(2) {
+  margin-top: 0;
+}
+.header .top-bar .social-link:nth-child(3) {
+  margin-top: 0;
+}
+.header .top-bar .social-link:nth-child(3n) {
+  margin-right: 0;
+}
+.header .top-bar .social-link:last-child:nth-child(1) {
+  margin: 0;
+}
+.header .top-bar .social-link:last-child:nth-child(2) {
+  margin: 0;
+}
+.header .top-bar .social-link:last-child:nth-child(3) {
+  margin: 0;
+}
+.header .top-bar .dropdown-pane {
+  width: auto;
 }
 
 @media screen and (min-width: 0em) and (max-width: 39.9375em) {
@@ -191,6 +240,30 @@
     border-color: #6E6E6E transparent transparent !important;
     top: 22px !important;
   }
+
+  .social-links {
+    width: 200px;
+    position: relative;
+    margin-right: 20px;
+    margin-top: 8px;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  .social-link img {
+    width: 40px;
+    height: 40px;
+    float: left;
+    position: relative;
+  }
+  .social-link:hover {
+    opacity: .65;
+  }
 }
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .top-bar {
@@ -274,5 +347,22 @@
   .off-canvas .is-accordion-submenu-parent > a::after {
     border-color: #6E6E6E transparent transparent !important;
     top: 22px !important;
+  }
+
+  .social-link {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  .social-link img {
+    width: 40px;
+    height: 40px;
+    float: left;
+    position: relative;
+  }
+  .social-link:hover {
+    opacity: .65;
   }
 }

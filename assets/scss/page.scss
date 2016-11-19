@@ -27,6 +27,30 @@
       @include robotoSlab(35px, 400, $white, none);
       text-align: center;
     }
+    .flex-video {
+      display: none;
+    }
+  }
+  .flex-video {
+    padding-bottom: 56%;
+    margin: 0;
+  }
+  blockquote {
+    border-left: 2px solid $white;
+    padding-bottom: 0.5625rem;
+    p {
+      color: $grey;
+    }
+  }
+  cite {
+    color: $grey;
+  }
+  tbody, thead {
+    border: 0;
+  }
+  pre {
+    color: $off-black;
+    border: 0;
   }
 }
 
