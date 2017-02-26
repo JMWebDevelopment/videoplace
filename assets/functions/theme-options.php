@@ -2,7 +2,7 @@
 /**
  * Theme-options.php
  *
- * Theme options file, using the Customizer, for Fotographia
+ * Theme options file, using the Customizer, for VideoPlace
  *
  * @author Jacob Martella
  * @package VideoPlace
@@ -39,8 +39,8 @@ function videoplace_general_customizer( $wp_customize ) {
 	);
 
     //* Get the categories for the home page options
-    $schemes[ 'light' ] = __( 'Light', 'fotographia' );
-    $schemes[ 'dark' ] = __( 'Dark', 'fotographia' );
+    $schemes[ 'light' ] = __( 'Light', 'videoplace' );
+    $schemes[ 'dark' ] = __( 'Dark', 'videoplace' );
 
     //* Home Slider Category
     $wp_customize->add_setting(

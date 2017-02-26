@@ -125,12 +125,6 @@ function videoplace_theme_support() {
 		'flex-width' 	=> true,
 	) );
 
-	//* Adding post format support
-	add_theme_support( 'post-formats',
-		array(
-			'video'
-		)
-	);
 }
 add_action('after_setup_theme','videoplace_theme_support', 16);
 /**
