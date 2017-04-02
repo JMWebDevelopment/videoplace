@@ -61,6 +61,7 @@
     @include roboto(18px, 300, $white, uppercase);
     margin-left: 0;
     margin-right: 10px;
+    display: inline-block;
     a {
       color: $white;
     }

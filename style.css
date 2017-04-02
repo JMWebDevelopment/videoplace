@@ -4368,6 +4368,13 @@ to display none.
 /**
 ***************** B. Theme Defaults ************************
 */
+/**
+* Theme Default Styles
+*
+* @package VideoPlace
+* @author Jacob Martella
+* @version 1.0
+*/
 textarea {
   overflow: auto;
   vertical-align: top; }
@@ -4650,6 +4657,19 @@ ul, ol {
 /**
 ***************** C. WordPress Classes ************************
 */
+/**
+* WordPress Classes Styles
+*
+* @package ***Theme Name***
+* @author Jacob Martella
+* @version 1.0
+*/
+/*
+* A. By Author
+* B. Sticky
+* C. Photos
+* D. Gallery
+*/
 /*
 A. By Author
 ------------------------------------------- */
@@ -4749,7 +4769,14 @@ E. Screen Reader Text
 ***************** II. Header ************************
 */
 /**
-***************** A. Header Area ************************
+* Header Styles
+*
+* @package VideoPlace
+* @author Jacob Martella
+* @version 1.0
+*/
+/**
+***************** B. Header ************************ 
 */
 .masthead {
   text-align: center;
@@ -4768,7 +4795,7 @@ E. Screen Reader Text
     text-transform: none; }
 
 /**
-***************** B. Main Menu ************************
+***************** C. Main Menu ************************ 
 */
 .header .top-bar {
   background-color: #000000;
@@ -4815,7 +4842,8 @@ E. Screen Reader Text
               display: none !important;
               border-color: #6E6E6E transparent transparent !important; }
           .header .top-bar ul .menu-item ul li ul {
-            top: 1px !important; }
+            top: 1px !important;
+            border: 0; }
     .header .top-bar ul .menu-icon {
       border: 0px;
       background-color: transparent; }
@@ -4830,7 +4858,7 @@ E. Screen Reader Text
     top: 22px !important; }
 
 /**
-***************** C. Social Media Links ************************
+***************** D. Social Media Links ************************
 */
 .header .top-bar .dashicons-plus {
   width: 45px;
@@ -5027,6 +5055,13 @@ E. Screen Reader Text
 /**
 ***************** III. Home ************************
 */
+/**
+* Home Styles
+*
+* @package VideoPlace
+* @author Jacob Martella
+* @version 1.0
+*/
 #top-post {
   background-color: rgba(216, 216, 216, 0.3);
   margin-top: 15px; }
@@ -5137,6 +5172,13 @@ E. Screen Reader Text
     padding-left: 0.9375rem; } }
 /**
 ***************** IV. Single ************************
+*/
+/**
+* Single Post Styles
+*
+* @package VideoPlace
+* @author Jacob Martella
+* @version 1.0
 */
 .video-top {
   padding-bottom: 15px;
@@ -5288,6 +5330,13 @@ E. Screen Reader Text
 /**
 ***************** V. Comments ************************
 */
+/**
+* Comments Styles
+*
+* @package VideoPlace
+* @author Jacob Martella
+* @version 1.0
+*/
 .comments-area {
   background-color: rgba(110, 110, 110, 0.3);
   padding: 10px 15px;
@@ -5344,6 +5393,15 @@ E. Screen Reader Text
 
 /**
 ***************** VI. Index ************************
+*/
+/**
+* Index Styles
+*
+* This file contains the styles for both the index and archive templates
+*
+* @package VideoPlace
+* @author Jacob Martella
+* @version 1.0
 */
 .archive-title {
   font-family: 'Roboto', sans-serif;
@@ -5404,7 +5462,8 @@ E. Screen Reader Text
   color: #FFFFFF;
   text-transform: uppercase;
   margin-left: 0;
-  margin-right: 10px; }
+  margin-right: 10px;
+  display: inline-block; }
   .page-navigation li a {
     color: #FFFFFF; }
   .page-navigation li:hover {
@@ -5445,6 +5504,13 @@ E. Screen Reader Text
 
 /**
 ***************** VIII. Pages ************************
+*/
+/**
+* Page Styles
+*
+* @package VideoPlace
+* @author Jacob Martella
+* @version 1.0
 */
 .page-post .article-header {
   padding-bottom: 15px;
@@ -5512,11 +5578,23 @@ E. Screen Reader Text
 ***************** IX. Sidebars ************************
 */
 /**
+* Sidebar Styles
+*
+* @package VideoPlace
+* @author Jacob Martella
+* @version 1.0
+*/
+/**
 ***************** A. Widgets ************************ 
 */
 .sidebar {
   padding-right: 0;
-   }
+  /**
+  ***************** B. Tags ************************
+  */
+  /**
+  ***************** C. Calendar ************************
+  */ }
   .sidebar .widget {
     background-color: rgba(216, 216, 216, 0.3);
     padding: 10px 5px;
@@ -5531,9 +5609,6 @@ E. Screen Reader Text
       border-bottom: 1px solid #FFFFFF; }
     .sidebar .widget a {
       color: #D8D8D8; }
-  /**
-  ***************** B. Tags ************************
-  */
   .sidebar .tagcloud a {
     font-family: 'Roboto', sans-serif;
     font-size: 16px !important;
@@ -5549,9 +5624,6 @@ E. Screen Reader Text
       background-color: #FFFFFF;
       color: #000000;
       display: inline-block; }
-  /**
-  ***************** C. Calendar ************************
-  */
   .sidebar #wp-calendar {
     width: 100%;
     background-color: transparent;
@@ -5665,6 +5737,13 @@ E. Screen Reader Text
     padding-right: 0.9375rem; } }
 /**
 ***************** X. Footer ************************
+*/
+/**
+* Footer Styles
+*
+* @package VideoPlace
+* @author Jacob Martella
+* @version 1.0
 */
 .footer {
   background-color: #000000;
