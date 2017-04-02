@@ -287,7 +287,7 @@ function videoplace_page_navi( $before = '', $after = '' ) {
 	}
 	if ( get_previous_posts_link() ) {
 		echo '<li>';
-		previous_posts_link( '&laquo;&laquo; Previous', 'videoplace' );
+		previous_posts_link( __( '&laquo;&laquo; Previous', 'videoplace' ), $max_page );
 		echo '</li>';
 	}
 	for( $i = $start_page; $i  <= $end_page; $i++ ) {
@@ -299,7 +299,7 @@ function videoplace_page_navi( $before = '', $after = '' ) {
 	}
 	if ( get_next_posts_link() ) {
 		echo '<li>';
-		next_posts_link( 'Next &#187;&#187;', 'videoplace' );
+		next_posts_link( __( 'Next &#187;&#187;', 'videoplace' ), $max_page );
 		echo '</li>';
 	}
 	if ( $end_page < $max_page ) {

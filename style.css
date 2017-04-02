@@ -5462,7 +5462,8 @@ E. Screen Reader Text
   color: #FFFFFF;
   text-transform: uppercase;
   margin-left: 0;
-  margin-right: 10px; }
+  margin-right: 10px;
+  display: inline-block; }
   .page-navigation li a {
     color: #FFFFFF; }
   .page-navigation li:hover {
