@@ -28,9 +28,27 @@
 				if ( $top_post->have_posts() ) : while ( $top_post->have_posts() ) : $top_post->the_post(); $do_not_duplicate[] = $post->ID;
 			?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<div class="large-8 medium-12 small-12 columns">
-						<?php echo hybrid_media_grabber(); ?>
-					</div>
+                    <?php if ( has_post_format( 'image' ) ) { ?>
+                        <div class="photo large-8 medium-12 small-12 columns">
+                            <?php if ( has_post_thumbnail() ) {
+                                the_post_thumbnail('videoplace-featured-image');
+                            } else {
+                                $media = get_attached_media( 'image' );
+                                foreach ( $media as $image ) {
+                                    echo '<img width="800" height="440" src="' . esc_url( $image->guid ) . '" />';
+                                    break;
+                                }
+                            } ?>
+                        </div>
+                    <?php } elseif ( has_post_format( 'video' ) ) { ?>
+                        <div class="video large-8 medium-12 small-12 columns">
+                            <?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
+                        </div>
+                    <?php } else { ?>
+                        <div class="video large-8 medium-12 small-12 columns">
+                            <?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
+                        </div>
+                    <?php } ?>
 					<div class="details large-4 medium-12 small-12 columns">
 						<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 						<div class="post-details clearfix">
@@ -59,7 +77,23 @@
 				?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'video-post' ); ?>>
 						<h5 class="post-category"><?php $cats = get_the_category(); echo $cats[ 0 ]->name; ?></h5>
-						<?php echo hybrid_media_grabber(); ?>
+                        <div class="photo-video">
+                            <?php if ( has_post_format( 'image' ) ) { ?>
+                                <?php if ( has_post_thumbnail() ) {
+                                    the_post_thumbnail('videoplace-featured-image');
+                                } else {
+                                    $media = get_attached_media( 'image' );
+                                    foreach ( $media as $image ) {
+                                        echo '<img width="800" height="440" src="' . esc_url( $image->guid ) . '" />';
+                                        break;
+                                    }
+                                } ?>
+                            <?php } elseif ( has_post_format( 'video' ) ) { ?>
+                                <?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
+                            <?php } else { ?>
+                                <?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
+                            <?php } ?>
+                        </div>
 						<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 						<div class="post-details clearfix">
 							<?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?>

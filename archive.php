@@ -25,7 +25,23 @@
 				    <article id="post-<?php the_ID(); ?>" <?php post_class( 'archive-video-post' ); ?>>
 					    <h5 class="post-category"><?php $cats = get_the_category(); echo $cats[ 0 ]->name; ?></h5>
 						<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					    <?php echo hybrid_media_grabber(); ?>
+                        <div class="photo-video">
+                            <?php if ( has_post_format( 'image' ) ) { ?>
+                                <?php if ( has_post_thumbnail() ) {
+                                    the_post_thumbnail('videoplace-featured-image');
+                                } else {
+                                    $media = get_attached_media( 'image' );
+                                    foreach ( $media as $image ) {
+                                        echo '<img width="800" height="440" src="' . esc_url( $image->guid ) . '" />';
+                                        break;
+                                    }
+                                } ?>
+                            <?php } elseif ( has_post_format( 'video' ) ) { ?>
+                                <?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
+                            <?php } else { ?>
+                                <?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
+                            <?php } ?>
+                        </div>
 					    <div class="post-details clearfix">
 						    <?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?>
 						    <h4 class="post-detail"><?php echo __( 'Posted by ', 'videoplace' ); the_author_posts_link(); echo __( ' on ', 'videoplace' ); the_date( get_option( 'date_format' ) ); ?></h4>

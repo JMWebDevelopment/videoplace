@@ -19,9 +19,28 @@
 
 			    <article id="post-<?php the_ID(); ?>" <?php post_class( 'row video-top' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-				    <div class="video large-8 medium-12 small-12 columns">
-				        <?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
-				    </div>
+                    <?php if ( has_post_format( 'image' ) ) { ?>
+                        <div class="photo large-8 medium-12 small-12 columns">
+                            <?php if ( has_post_thumbnail() ) {
+                                the_post_thumbnail('videoplace-featured-image');
+                            } else {
+                                $media = get_attached_media( 'image' );
+                                foreach ( $media as $image ) {
+                                    echo '<img width="800" height="440" src="' . esc_url( $image->guid ) . '" />';
+                                    break;
+                                }
+                            } ?>
+                        </div>
+                    <?php } elseif ( has_post_format( 'video' ) ) { ?>
+                        <div class="video large-8 medium-12 small-12 columns">
+				            <?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
+                        </div>
+                    <?php } else { ?>
+                        <div class="video large-8 medium-12 small-12 columns">
+                            <?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
+                        </div>
+                    <?php } ?>
+
 
 				    <div class="large-4 medium-12 small-12 columns article-details">
 					    <header class="article-header">
@@ -40,8 +59,16 @@
 
 			    <div class="row">
 				    <div class="post-more large-8 medium-12 small-12 columns">
-					    <section class="entry-content" itemprop="articleBody">
-							<?php the_content(); ?>
+					    <section class="entry-content clearfix" itemprop="articleBody">
+                            <?php
+                            if ( has_post_format( 'image' ) ) {
+                                $content = get_the_content();
+                                $content = preg_replace( "/<img[^>]+\>/i", "", $content, 1 );
+                                echo $content;
+                            } else {
+                                the_content();
+                            }
+                            ?>
 					    </section> <!-- end article section -->
 
 					    <?php comments_template(); ?>

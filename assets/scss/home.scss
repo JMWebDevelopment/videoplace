@@ -14,6 +14,19 @@
   margin-top: 15px;
   .columns {
     padding-left: 0;
+    &.photo {
+      padding-left: 0;
+      padding-bottom: 36.7%;
+      position: relative;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
     &.details {
       padding: 10px;
       .title {
@@ -68,6 +81,12 @@
       .post-category {
         @include roboto(18px, 300, $white, uppercase);
       }
+      .photo-video {
+        img {
+          margin: 0 10px;
+          width: 100%;
+        }
+      }
       .flex-video {
         padding-bottom: 56%;
         margin: 0 -10px;
@@ -110,6 +129,18 @@
     .medium-12 {
       padding: 0;
     }
+    .columns {
+      .photo {
+        padding-left: 0;
+        overflow: visible;
+        padding-bottom: 0;
+        img {
+          position: relative;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
   }
   .home-posts-section {
     .home-posts {
@@ -125,6 +156,18 @@
     margin-top: 15px;
     .medium-12 {
       padding: 0;
+    }
+    .columns {
+      .photo {
+        padding-left: 0;
+        overflow: visible;
+        padding-bottom: 0;
+        img {
+          position: relative;
+          width: 100%;
+          height: auto;
+        }
+      }
     }
   }
   .home-posts-section {

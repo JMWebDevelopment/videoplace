@@ -13,6 +13,19 @@
   padding-bottom: 15px;
   border-bottom: 1px solid $white;
   margin-bottom: 15px;
+  .photo {
+    padding-left: 0;
+    padding-bottom: 36.7%;
+    position: relative;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
   .video {
     padding-left: 0;
     .flex-video {
@@ -110,6 +123,12 @@
       padding-bottom: 56%;
       margin: 0 -10px 5px -10px;
     }
+    .photo-video {
+      img {
+        margin: 0 -10px;
+        width: 100%;
+      }
+    }
     .post-category {
       @include roboto(18px, 300, $white, uppercase);
     }
@@ -146,6 +165,16 @@
     .video {
       padding-left: 0.625rem;
     }
+    .photo {
+      padding-left: 0.625rem;
+      overflow: visible;
+      padding-bottom: 0;
+      img {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+    }
     .article-details {
       padding-right: 0.625rem;
       .article-header {
@@ -164,6 +193,16 @@
   .video-top {
     .video {
       padding-left: 0.9375rem;
+    }
+    .photo {
+      padding-left: 0.9375rem;
+      overflow: visible;
+      padding-bottom: 0;
+      img {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
     }
     .article-details {
       padding-right: 0.9375rem;

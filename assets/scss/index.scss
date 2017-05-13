@@ -24,6 +24,12 @@
   .post-category {
     @include roboto(18px, 300, $white, uppercase);
   }
+  .photo-video {
+    img {
+      margin: 0 -10px;
+      width: 100%;
+    }
+  }
   .flex-video {
     padding-bottom: 56%;
     margin: 0 -10px;
