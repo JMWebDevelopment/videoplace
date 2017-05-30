@@ -107,7 +107,7 @@ function videoplace_theme_support() {
 	add_theme_support( 'custom-header', $args );
 
 	//* Add Support for Translation
-	load_theme_textdomain( 'videoplace', get_template_directory() .'/assets/translation' );
+	load_theme_textdomain( 'videoplace', get_template_directory() .'/assets/translations' );
 
 	//* Set content width
 	if ( ! isset( $content_width ) ) $content_width = 785;
