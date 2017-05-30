@@ -2,7 +2,7 @@
 Contributers: Jacob Martella
 Tags: black, dark, two-columns, right-sidebar, responsive-layout, fluid-layout, custom-background, custom-header, editor-style, featured-images, sticky-posts, theme-options, translation-ready, threaded-comments
 Requires at least: 4.3
-Tested up to: 4.7
+Tested up to: 4.8
 Stable tag: 1.1
 
 == Description ==
@@ -72,9 +72,15 @@ When customizing a theme, the best practice is to create a child theme. This way
 	add_action( 'wp_enqueue_scripts', 'videoplace_child_theme_styles', 10 ); ?>
 
 == Support ==
-If you have a question, need to report a bug to be fixed or have a feature request for a future version, email me at jacob.martella@att.net or fill out the form on the theme page (http://jacobmartella.com/videoplace-wordpress-theme).
+If you have a question, need to report a bug to be fixed or have a feature request for a future version, email me at jacob.martella@att.net or fill out the form on the theme page (https://jacobmartella.com/videoplace-wordpress-theme).
 
 == Changelog ==
+= 1.2 =
+- Added support for image post formats.
+- Added theme option to show the number of comments on a post on the home, index and archive pages.
+- Added Spanish, French, German, Italian and Russian translations.
+- Tested to work with WordPress 4.8.
+
 = 1.1 =
 - Added support for the video post format.
 - Added a light theme option.
