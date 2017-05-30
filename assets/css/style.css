@@ -5249,7 +5249,8 @@ E. Screen Reader Text
         .video-top .article-details .article-header .post-details img {
           border-radius: 50px;
           float: left;
-          margin-right: 10px; }
+          margin-right: 10px;
+          padding: 0; }
         .video-top .article-details .article-header .post-details .post-detail {
           font-family: 'Roboto', sans-serif;
           font-size: 20px;

@@ -79,6 +79,24 @@ function videoplace_general_customizer( $wp_customize ) {
 		)
 	);
 
+    //* Display number of comments on listing pages
+    $wp_customize->add_setting(
+        'videoplace-show-comments-number',
+        array(
+            'default'           => '',
+            'sanitize_callback' => 'videoplace_sanitize_checkbox',
+        )
+    );
+
+    $wp_customize->add_control(
+        'videoplace-show-comments-number',
+        array(
+            'label'     => __( 'Display the number of comments on the home, index and archive pages: ', 'videoplace' ),
+            'section'   => 'general',
+            'type'      => 'checkbox',
+        )
+    );
+
 	//* Social Links
 	//* Facebook
 	$wp_customize->add_setting(
