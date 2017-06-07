@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /*
 Theme Name: VideoPlace
-Theme URI: http://www.jacobmartella.com/wordpress/wordpress-themes/video-place-wordpress-theme
+Theme URI: https://www.jacobmartella.com/wordpress/wordpress-themes/video-place-wordpress-theme
 Description: YouTube is a great place to upload your videos, but a not-so-great place if you want a customizable vlog. VideoPlace provides you with just that. This theme allows you the flexibility of being able to customize the look of your vlog, while keeping the look and feel of you videos similar to that of YouTube. Happy vlogging!
 Author: Jacob Martella
-Author URI: http://www.jacobmartella.com/
-Version: 1.1
+Author URI: https://www.jacobmartella.com/
+Version: 1.2 
 License: GNU General Public License & MIT
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: two-columns, right-sidebar, custom-background, custom-header, editor-style, featured-images, sticky-post, theme-options, translation-ready, threaded-comments
@@ -4373,7 +4373,7 @@ to display none.
 *
 * @package VideoPlace
 * @author Jacob Martella
-* @version 1.0
+* @version 1.2
 */
 textarea {
   overflow: auto;
@@ -4660,9 +4660,9 @@ ul, ol {
 /**
 * WordPress Classes Styles
 *
-* @package ***Theme Name***
+* @package VideoPlace
 * @author Jacob Martella
-* @version 1.0
+* @version 1.2
 */
 /*
 * A. By Author
@@ -4773,7 +4773,7 @@ E. Screen Reader Text
 *
 * @package VideoPlace
 * @author Jacob Martella
-* @version 1.0
+* @version 1.2
 */
 /**
 ***************** B. Header ************************ 
@@ -5060,7 +5060,7 @@ E. Screen Reader Text
 *
 * @package VideoPlace
 * @author Jacob Martella
-* @version 1.0
+* @version 1.2
 */
 #top-post {
   background-color: rgba(216, 216, 216, 0.3);
@@ -5208,7 +5208,7 @@ E. Screen Reader Text
 *
 * @package VideoPlace
 * @author Jacob Martella
-* @version 1.0
+* @version 1.2
 */
 .video-top {
   padding-bottom: 15px;
@@ -5396,7 +5396,7 @@ E. Screen Reader Text
 *
 * @package VideoPlace
 * @author Jacob Martella
-* @version 1.0
+* @version 1.2
 */
 .comments-area {
   background-color: rgba(110, 110, 110, 0.3);
@@ -5462,7 +5462,7 @@ E. Screen Reader Text
 *
 * @package VideoPlace
 * @author Jacob Martella
-* @version 1.0
+* @version 1.2
 */
 .archive-title {
   font-family: 'Roboto', sans-serif;
@@ -5574,7 +5574,7 @@ E. Screen Reader Text
 *
 * @package VideoPlace
 * @author Jacob Martella
-* @version 1.0
+* @version 1.2
 */
 .page-post .article-header {
   padding-bottom: 15px;
@@ -5646,7 +5646,7 @@ E. Screen Reader Text
 *
 * @package VideoPlace
 * @author Jacob Martella
-* @version 1.0
+* @version 1.2
 */
 /**
 ***************** A. Widgets ************************ 
@@ -5807,7 +5807,7 @@ E. Screen Reader Text
 *
 * @package VideoPlace
 * @author Jacob Martella
-* @version 1.0
+* @version 1.2
 */
 .footer {
   background-color: #000000;

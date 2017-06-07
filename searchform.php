@@ -4,7 +4,7 @@
  *
  * @package VideoPlace
  * @author  Jacob Martella
- * @version  1.1
+ * @version  1.2
  */
 ?>
 <form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">

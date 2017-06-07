@@ -3,7 +3,7 @@ Contributers: Jacob Martella
 Tags: black, dark, two-columns, right-sidebar, responsive-layout, fluid-layout, custom-background, custom-header, editor-style, featured-images, sticky-posts, theme-options, translation-ready, threaded-comments
 Requires at least: 4.3
 Tested up to: 4.8
-Stable tag: 1.1
+Stable tag: 1.2
 
 == Description ==
 YouTube is a great place to upload your videos, but a not-so-great place if you want a customizable vlog. VideoPlace provides you with just that. This theme allows you the flexibility of being able to customize the look of your vlog, while keeping the look and feel of you videos similar to that of YouTube. Happy vlogging!

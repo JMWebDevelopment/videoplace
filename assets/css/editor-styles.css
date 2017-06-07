@@ -3,14 +3,14 @@
 *
 * @package VideoPlace
 * @author Jacob Martella
-* @version 1.1
+* @version 1.2
 */
 /**
 * WordPress Classes Styles
 *
-* @package ***Theme Name***
+* @package VideoPlace
 * @author Jacob Martella
-* @version 1.0
+* @version 1.2
 */
 /*
 * A. By Author
@@ -118,7 +118,7 @@ E. Screen Reader Text
 *
 * @package VideoPlace
 * @author Jacob Martella
-* @version 1.0
+* @version 1.2
 */
 textarea {
   overflow: auto;
