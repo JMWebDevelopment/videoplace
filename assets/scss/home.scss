@@ -14,6 +14,19 @@
   margin-top: 15px;
   .columns {
     padding-left: 0;
+    &.video {
+      position: relative;
+      .videoplace-featured-image {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
     &.photo {
       padding-left: 0;
       padding-bottom: 36.7%;
@@ -82,9 +95,24 @@
         @include roboto(18px, 300, $white, uppercase);
       }
       .photo-video {
+        position: relative;
         img {
           margin: 0 10px;
           width: 100%;
+        }
+        .videoplace-featured-image {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: 0 -10px;
+          img {
+            margin: 0;
+          }
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
       .flex-video {

@@ -34,10 +34,20 @@
                     <?php } elseif ( has_post_format( 'video' ) ) { ?>
                         <div class="video large-8 medium-12 small-12 columns">
 				            <?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
+                            <?php if ( has_post_thumbnail() ) { ?>
+                                <div class="videoplace-featured-image">
+                                    <?php the_post_thumbnail('videoplace-featured-image'); ?>
+                                </div>
+                            <? } ?>
                         </div>
                     <?php } else { ?>
                         <div class="video large-8 medium-12 small-12 columns">
                             <?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
+                            <?php if ( has_post_thumbnail() ) { ?>
+                                <div class="videoplace-featured-image">
+                                    <?php the_post_thumbnail('videoplace-featured-image'); ?>
+                                </div>
+                            <? } ?>
                         </div>
                     <?php } ?>
 

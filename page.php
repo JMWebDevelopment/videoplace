@@ -22,6 +22,11 @@
 						<?php if ( hybrid_media_grabber() ) { ?>
 							<header class="article-header">
 								<?php echo hybrid_media_grabber(); ?>
+                                <?php if ( has_post_thumbnail() ) { ?>
+                                    <div class="videoplace-featured-image">
+                                        <?php the_post_thumbnail('videoplace-featured-image'); ?>
+                                    </div>
+                                <? } ?>
 							</header> <!-- end article header -->
 						<?php } ?>
 

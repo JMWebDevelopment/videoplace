@@ -14,9 +14,20 @@
     padding-bottom: 15px;
     border-bottom: 1px solid $white;
     margin-bottom: 15px;
+    position: relative;
     .flex-video {
       padding-bottom: 56%;
       margin: 0;
+    }
+    .videoplace-featured-image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
   .entry-content {
