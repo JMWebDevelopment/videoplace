@@ -25,6 +25,9 @@ YouTube is a great place to upload your videos, but a not-so-great place if you 
 = Pulled Out Videos =
 VideoPlace features great support for displaying your videos. Simply place the YouTube, Vimeo or other embedded video link into the post and VideoPlace puts it in all of the necessary places to give your videos the treatment they deserve.
 
+= Custom Screenshots =
+Want to put up a custom photo over top of your video when the page loads? You can do that now in VideoPlace. Simply add a featured image to you post. Then the image will show up over top of the video. When the reader clicks on the photo, the video will appear and start playing.
+
 = Menu =
 VideoPlace supports one main menu displayed under the header that you can customize.
 
@@ -53,6 +56,7 @@ Setting up your first post might be a little bit interesting, compared to other 
 - Copy the video link and place it anywhere in the story (although putting at the top is the easiest).
 - Give the post an excerpt. If you don't see the excerpt box below the post editor, go to 'Screen Options' and make sure 'Excerpt' is selected. Make sure it's around 150 to 200 characters.
 - Put some tags on the post. This helps when finding related videos.
+- If you want to show a photo over top of the video when the page loads, add a featured image to the post. The image will go away when the user clicks on it.
 - Because the video shows up instead of a featured photo, you don't have to worry about adding one to the post.
 
 = Set Up a Child Theme =
@@ -75,6 +79,10 @@ When customizing a theme, the best practice is to create a child theme. This way
 If you have a question, need to report a bug to be fixed or have a feature request for a future version, email me at jacob.martella@att.net or fill out the form on the theme page (https://jacobmartella.com/videoplace-wordpress-theme).
 
 == Changelog ==
+= 1.3 =
+- Added support to show a featured photo over the video on page load if the user wants to.
+- Updated Foundation.
+
 = 1.2 =
 - Added support for image post formats.
 - Added theme option to show the number of comments on a post on the home, index and archive pages.
