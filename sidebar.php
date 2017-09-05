@@ -4,7 +4,7 @@
  *
  * @package VideoPlace
  * @author  Jacob Martella
- * @version  1.2
+ * @version  1.3
  */
 ?>
 <div id="sidebar1" class="sidebar large-4 medium-12 small-12 columns" role="complementary">

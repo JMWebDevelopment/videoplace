@@ -6,7 +6,7 @@
  *
  * @author Jacob Martella
  * @package VideoPlace
- * @version 1.2
+ * @version 1.3
  */
 
 //* Create the general settings section

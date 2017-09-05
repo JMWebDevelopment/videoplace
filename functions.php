@@ -4,7 +4,7 @@
  *
  * @package VideoPlace
  * @author Jacob Martella
- * @version 1.2
+ * @version 1.3
  */
 /**
  * Table of Contents
