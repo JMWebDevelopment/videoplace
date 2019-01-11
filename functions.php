@@ -4,7 +4,7 @@
  *
  * @package VideoPlace
  * @author Jacob Martella
- * @version 1.3
+ * @version 1.1
  */
 /**
  * Table of Contents
@@ -67,9 +67,6 @@ function videoplace_theme_support() {
 	//* Default thumbnail size
 	set_post_thumbnail_size( 125, 125, true );
 
-	//* Add Image Sizes
-    add_image_size( 'videoplace-featured-image', 800, 440, true );
-
 	//* Add RSS Support
 	add_theme_support( 'automatic-feed-links' );
 
@@ -107,7 +104,7 @@ function videoplace_theme_support() {
 	add_theme_support( 'custom-header', $args );
 
 	//* Add Support for Translation
-	load_theme_textdomain( 'videoplace', get_template_directory() .'/assets/translations' );
+	load_theme_textdomain( 'videoplace', get_template_directory() .'/assets/translation' );
 
 	//* Set content width
 	if ( ! isset( $content_width ) ) $content_width = 785;
@@ -127,13 +124,6 @@ function videoplace_theme_support() {
 		'width'       	=> 300,
 		'flex-width' 	=> true,
 	) );
-
-    add_theme_support(
-        'post-formats', array(
-            'image',
-            'video'
-        )
-    );
 
 }
 add_action('after_setup_theme','videoplace_theme_support', 16);
@@ -235,23 +225,7 @@ function videoplace_related_posts() {
 			foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
 					<article id="post-<?php the_ID(); ?>" <?php post_class( 'video-post' ); ?>>
 						<h5 class="post-category"><?php $cats = get_the_category(); echo $cats[ 0 ]->name; ?></h5>
-                        <div class="photo-video">
-                            <?php if ( has_post_format( 'image' ) ) { ?>
-                                <?php if ( has_post_thumbnail() ) {
-                                    the_post_thumbnail('videoplace-featured-image');
-                                } else {
-                                    $media = get_attached_media( 'image' );
-                                    foreach ( $media as $image ) {
-                                        echo '<img width="800" height="440" src="' . esc_url( $image->guid ) . '" />';
-                                        break;
-                                    }
-                                } ?>
-                            <?php } elseif ( has_post_format( 'video' ) ) { ?>
-                                <?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
-                            <?php } else { ?>
-                                <?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
-                            <?php } ?>
-                        </div>
+						<?php echo hybrid_media_grabber(); ?>
 						<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 						<div class="post-details clearfix">
 							<?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?>
