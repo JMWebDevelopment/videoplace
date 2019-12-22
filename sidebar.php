@@ -1,31 +1,21 @@
 <?php
 /**
- * Sidebar.php
+ * The sidebar containing the main widget area
  *
- * @package VideoPlace
- * @author  Jacob Martella
- * @version  1.3
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package wp_rig
  */
+
+namespace WP_Rig\WP_Rig;
+
+if ( ! wp_rig()->is_primary_sidebar_active() ) {
+	return;
+}
+
+wp_rig()->print_styles( 'wp-rig-sidebar', 'wp-rig-widgets' );
+
 ?>
-<div id="sidebar1" class="sidebar large-4 medium-12 small-12 columns" role="complementary">
-
-	<?php
-	if (is_author()) { ?>
-		<aside id="author-bio1" class="widget author-bio">
-			<?php the_post(); ?>
-			<div class="mugshot"><?php echo get_avatar(get_the_author_meta( 'ID' ), $size = 100); ?></div>
-			<h4 class="author-name"><?php echo __( 'About ', 'videoplace' ) . get_the_author_meta( 'display_name' ); ?></h4>
-			<p class="bio"><?php echo get_the_author_meta( 'description' ); ?></p>
-			<a href="mailto:<?php echo get_the_author_meta( 'email' ); ?>" target="_blank" class="button white"><?php _e( 'Message Me', 'videoplace' ) ?></a>
-			<?php rewind_posts(); ?>
-		</aside>
-	<?php }
-	?>
-
-	<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
-
-		<?php dynamic_sidebar( 'sidebar1' ); ?>
-
-	<?php endif; ?>
-
-</div>
+<aside id="secondary" class="primary-sidebar widget-area">
+	<?php wp_rig()->display_primary_sidebar(); ?>
+</aside><!-- #secondary -->
