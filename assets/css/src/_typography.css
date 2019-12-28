@@ -1,4 +1,5 @@
 @import "_custom-properties.css";
+@import "_custom_mixins.css";
 
 /*--------------------------------------------------------------
 # Typography
@@ -24,8 +25,27 @@ h4,
 h5,
 h6 {
 	font-family: var(--highlight-font-family);
-	font-stretch: condensed;
 	clear: both;
+}
+
+h6{
+	@mixin robotoSlab 18px, 300, var(--color-grey), uppercase;
+	margin: 3px;
+}
+h5{
+	@mixin robotoSlab 20px, 300, var(--color-grey), uppercase;
+}
+h4{
+	@mixin robotoSlab 24px, 300, var(--color-grey), uppercase;
+}
+h3{
+	@mixin roboto 26px, 300, var(--color-grey), uppercase;
+}
+h2{
+	@mixin roboto 30px, 300, var(--color-grey), none;
+}
+h1{
+	@mixin roboto 35px, 300, var(--color-grey), none;
 }
 
 .entry-header h1.entry-title,
@@ -113,3 +133,4 @@ ins {
 big {
 	font-size: 125%;
 }
+

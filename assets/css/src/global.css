@@ -21,6 +21,7 @@
 # Imports
 --------------------------------------------------------------*/
 @import "_custom-properties.css";
+@import "_custom_mixins.css";
 @import "_reset.css";
 @import "_typography.css";
 @import "_elements.css";
@@ -119,15 +120,24 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
-	border-radius: 3px;
-	background: #e6e6e6;
-	color: rgba(0, 0, 0, 0.8);
-	font-size: 0.75rem;
-	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	background-color: var(--color-black);
+	box-shadow: none;
+	@mixin roboto 18px, 300, var(--color-white), uppercase;
 	cursor: pointer;
+	width: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	& a {
+		color: var(--color-white);
+	}
+	&.white {
+		border: 2px solid var(--color-white);
+		background-color: transparent;
+		color: $white;
+		border-radius: 2px;
+		padding: 10px 15px;
+		text-align: center;
+	}
 }
 /* stylelint-enable */
 
@@ -135,7 +145,8 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
+	background-color: var(--color-white);
+	color: var(--color-black);
 }
 
 button:active,
@@ -146,7 +157,8 @@ input[type="reset"]:active,
 input[type="reset"]:focus,
 input[type="submit"]:active,
 input[type="submit"]:focus {
-	border-color: #aaa #bbb #bbb;
+	background-color: var(--color-white);
+	color: var(--color-black);
 }
 
 input[type="text"],
@@ -165,10 +177,14 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
-	border: 1px solid #ccc;
-	border-radius: 3px;
+	background-color: #ffffff;
+	border: 1px solid #000000;
+	color: #000000;
+	font-size: 14px;
 	padding: 3px;
+	max-width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 input[type="text"]:focus,
@@ -187,11 +203,18 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: #111;
+	border: 1px solid #000000;
 }
 
 select {
-	border: 1px solid #ccc;
+	background-color: #ffffff;
+	border: 1px solid #000000;
+	color: #000000;
+	font-size: 14px;
+	padding: 3px;
+	max-width: 100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 /*--------------------------------------------------------------

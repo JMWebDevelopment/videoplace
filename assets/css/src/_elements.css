@@ -1,4 +1,5 @@
 @import "_custom-properties.css";
+@import "_custom_mixins.css";
 
 /*--------------------------------------------------------------
 # Elements
@@ -29,7 +30,7 @@ body {
 
 /* stylelint-disable */
 hr {
-	background-color: #ccc;
+	background-color: #efefef;
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
@@ -77,6 +78,46 @@ figure {
 }
 
 table {
-	margin: 0 0 1.5em;
+	margin: 0 0 4rem;
 	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	line-height: 2;
+	border: 1px solid #000000;
+
+	& thead {
+
+		& tr {
+
+			& th {
+				text-align: left;
+				background-color: #252525;
+				color: #ffffff;
+				font-family: 'Lato', sans-serif;
+				font-weight: 300;
+				padding: 2px 0;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	& tbody {
+
+		& tr {
+			border-top: 1px solid #000000;
+			background-color: #999999;
+
+			& td {
+				text-align: left;
+
+				& a {
+					color: #ffffff !important;
+				}
+			}
+
+			&:nth-child(even) {
+				background-color: #666666;
+			}
+		}
+	}
 }
