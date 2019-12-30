@@ -91,6 +91,11 @@ class Component implements Component_Interface, Templating_Component_Interface {
 
 		// Add support for responsive embedded content.
 		add_theme_support( 'responsive-embeds' );
+
+		// Add support for image sizes
+		add_image_size( 'videoplace-featured-image', 800, 440, true );
+
+
 	}
 
 	/**
