@@ -10,19 +10,26 @@ namespace WP_Rig\WP_Rig;
 ?>
 
 <div class="site-info">
-	<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wp-rig' ) ); ?>">
-		<?php
-		/* translators: %s: CMS name, i.e. WordPress. */
-		printf( esc_html__( 'Proudly powered by %s', 'wp-rig' ), 'WordPress' );
-		?>
-	</a>
-	<span class="sep"> | </span>
-	<?php
-	/* translators: Theme name. */
-	printf( esc_html__( 'Theme: %s by the contributors.', 'wp-rig' ), '<a href="' . esc_url( 'https://github.com/wprig/wprig/' ) . '">WP Rig</a>' );
+	<div class="footer-info footer-column large-4 medium-4 small-12 columns">
+		<?php if ( function_exists( 'the_custom_logo' ) ) {
+			the_custom_logo();
+		} ?>
+		<h3 class="footer-text">&copy; <?php echo date( 'Y' ); ?> <?php echo get_bloginfo( 'name' ); ?><br />
+			<?php _e( 'VideoPlace Theme', 'videoplace' ); ?><br />
+			<?php wp_loginout(); ?></h3>
+	</div>
+	<div class="footer-column large-4 medium-4 small-12 columns">
+		<?php if ( is_active_sidebar( 'footer-center' ) ) : ?>
 
-	if ( function_exists( 'the_privacy_policy_link' ) ) {
-		the_privacy_policy_link( '<span class="sep"> | </span>' );
-	}
-	?>
+			<?php dynamic_sidebar( 'footer-center' ); ?>
+
+		<?php endif; ?>
+	</div>
+	<div class="footer-column large-4 medium-4 small-12 columns">
+		<?php if ( is_active_sidebar( 'footer-right' ) ) : ?>
+
+			<?php dynamic_sidebar( 'footer-right' ); ?>
+
+		<?php endif; ?>
+	</div>
 </div><!-- .site-info -->

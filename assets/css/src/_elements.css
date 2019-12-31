@@ -23,7 +23,7 @@ html {
 
 /* stylelint-disable */
 body {
-	background: #fff;
+	background: var(--color-off-black);
 	/* Fallback for when there is no custom background color defined. */
 }
 /* stylelint-enable */
