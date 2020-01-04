@@ -91,8 +91,6 @@ wp_rig()->print_styles( 'wp-rig-content' );
 
 			<?php endif; ?>
 
-			<?php get_sidebar(); ?>
-
 		</div>
 	</main><!-- #primary -->
 <?php

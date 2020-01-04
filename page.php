@@ -42,8 +42,6 @@ wp_rig()->print_styles( 'wp-rig-content' );
 
 		<?php endwhile; endif; ?>
 
-		<?php get_sidebar(); ?>
-		
 	</main><!-- #primary -->
 <?php
 get_sidebar();
