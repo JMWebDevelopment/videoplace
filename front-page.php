@@ -8,6 +8,7 @@
  */
 
 namespace WP_Rig\WP_Rig;
+use WP_Query;
 
 get_header();
 
@@ -15,7 +16,7 @@ get_header();
 if ( is_home() ) {
 	wp_rig()->print_styles( 'wp-rig-content', 'wp-rig-front-page' );
 } else {
-	wp_rig()->print_styles( 'wp-rig-content' );
+	wp_rig()->print_styles( 'wp-rig-content', 'wp-rig-front-page' );
 }
 
 ?>
@@ -40,7 +41,7 @@ if ( is_home() ) {
 						<?php if ( has_post_format( 'image' ) ) { ?>
 							<div class="photo large-8 medium-12 small-12 columns">
 								<?php if ( has_post_thumbnail() ) {
-									the_post_thumbnail('videoplace-featured-image');
+									the_post_thumbnail('wprig-featured-image');
 								} else {
 									$media = get_attached_media( 'image' );
 									foreach ( $media as $image ) {
@@ -51,19 +52,19 @@ if ( is_home() ) {
 							</div>
 						<?php } elseif ( has_post_format( 'video' ) ) { ?>
 							<div class="video large-8 medium-12 small-12 columns">
-								<?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
+								<?php echo wp_rig()->media_grabber( array( 'split_media' => true ) ); ?>
 								<?php if ( has_post_thumbnail() ) { ?>
 									<div class="videoplace-featured-image">
-										<?php the_post_thumbnail('videoplace-featured-image'); ?>
+										<?php the_post_thumbnail('wprig-featured-image'); ?>
 									</div>
 								<? } ?>
 							</div>
 						<?php } else { ?>
 							<div class="video large-8 medium-12 small-12 columns">
-								<?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
+								<?php echo wp_rig()->media_grabber( array( 'split_media' => true ) ); ?>
 								<?php if ( has_post_thumbnail() ) { ?>
 									<div class="videoplace-featured-image">
-										<?php the_post_thumbnail('videoplace-featured-image'); ?>
+										<?php the_post_thumbnail('wprig-featured-image'); ?>
 									</div>
 								<? } ?>
 							</div>
@@ -72,7 +73,7 @@ if ( is_home() ) {
 							<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<div class="post-details clearfix">
 								<?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?>
-								<h4 class="post-detail"><?php echo __( 'Posted by ', 'videoplace' ); the_author_posts_link(); echo __( ' on ', 'videoplace' ); the_date( get_option( 'date_format' ) ); if ( get_theme_mod( 'videoplace-show-comments-number' ) == 1 ) { comments_popup_link( __( ', 0 Comments', 'videoplace' ), __( ', 1 Comment', 'videoplace' ), __( '. % Comments', 'videoplace' ), '', __( ', Comments Closed', 'videoplace' ) ); } ?></h4>
+								<p class="post-detail"><?php echo __( 'Posted by ', 'videoplace' ); the_author_posts_link(); echo __( ' on ', 'videoplace' ); the_date( get_option( 'date_format' ) ); if ( get_theme_mod( 'videoplace-show-comments-number' ) == 1 ) { comments_popup_link( __( ', 0 Comments', 'videoplace' ), __( ', 1 Comment', 'videoplace' ), __( '. % Comments', 'videoplace' ), '', __( ', Comments Closed', 'videoplace' ) ); } ?></p>
 							</div>
 							<?php the_excerpt(); ?>
 							<a href="<?php the_permalink(); ?>" class="button white"><?php _e( 'View Video Info', 'videoplace' ); ?></a>
@@ -99,7 +100,7 @@ if ( is_home() ) {
 							<div class="photo-video">
 								<?php if ( has_post_format( 'image' ) ) { ?>
 									<?php if ( has_post_thumbnail() ) {
-										the_post_thumbnail('videoplace-featured-image');
+										the_post_thumbnail('wprig-featured-image');
 									} else {
 										$media = get_attached_media( 'image' );
 										foreach ( $media as $image ) {
@@ -108,17 +109,17 @@ if ( is_home() ) {
 										}
 									} ?>
 								<?php } elseif ( has_post_format( 'video' ) ) { ?>
-									<?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
+									<?php echo wp_rig()->media_grabber( array( 'split_media' => true ) ); ?>
 									<?php if ( has_post_thumbnail() ) { ?>
 										<div class="videoplace-featured-image">
-											<?php the_post_thumbnail('videoplace-featured-image'); ?>
+											<?php the_post_thumbnail('wprig-featured-image'); ?>
 										</div>
 									<? } ?>
 								<?php } else { ?>
-									<?php echo hybrid_media_grabber( array( 'split_media' => true ) ); ?>
+									<?php echo wp_rig()->media_grabber( array( 'split_media' => true ) ); ?>
 									<?php if ( has_post_thumbnail() ) { ?>
 										<div class="videoplace-featured-image">
-											<?php the_post_thumbnail('videoplace-featured-image'); ?>
+											<?php the_post_thumbnail('wprig-featured-image'); ?>
 										</div>
 									<? } ?>
 								<?php } ?>
@@ -126,11 +127,11 @@ if ( is_home() ) {
 							<h2 class="title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<div class="post-details clearfix">
 								<?php echo get_avatar( get_the_author_meta( 'ID' ), 50 ); ?>
-								<h4 class="post-detail"><?php echo __( 'Posted by ', 'videoplace' ); the_author_posts_link(); echo __( ' on ', 'videoplace' ); the_date( get_option( 'date_format' ) ); if ( get_theme_mod( 'videoplace-show-comments-number' ) == 1 ) { comments_popup_link( __( ', 0 Comments', 'videoplace' ), __( ', 1 Comment', 'videoplace' ), __( '. % Comments', 'videoplace' ), '', __( ', Comments Closed', 'videoplace' ) ); } ?></h4>
+								<p class="post-detail"><?php echo __( 'Posted by ', 'videoplace' ); the_author_posts_link(); echo __( ' on ', 'videoplace' ); echo get_the_time( get_option( 'date_format' ) ); if ( get_theme_mod( 'videoplace-show-comments-number' ) == 1 ) { comments_popup_link( __( ', 0 Comments', 'videoplace' ), __( ', 1 Comment', 'videoplace' ), __( '. % Comments', 'videoplace' ), '', __( ', Comments Closed', 'videoplace' ) ); } ?></p>
 							</div>
 							<a href="<?php the_permalink(); ?>" class="button white"><?php _e( 'View Video Info', 'videoplace' ); ?></a>
 						</article>
-					<?php endwhile; videoplace_page_navi(); endif; wp_reset_query(); ?>
+					<?php endwhile; /* wp_rig()->page_navi(); */ endif; wp_reset_query(); ?>
 			</div>
 
 			<?php get_sidebar(); ?>

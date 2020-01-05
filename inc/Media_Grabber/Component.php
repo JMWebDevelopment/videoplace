@@ -8,6 +8,7 @@
 	namespace WP_Rig\WP_Rig\Media_Grabber;
 
 	use WP_Rig\WP_Rig\Component_Interface;
+	use WP_Rig\WP_Rig\Templating_Component_Interface;
 	use function get_theme_file_path;
 
 	/**
@@ -15,7 +16,7 @@
 	 *
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
-	class Component implements Component_Interface {
+	class Component implements Component_Interface, Templating_Component_Interface {
 
 		/**
 		 * Gets the unique identifier for the theme component.

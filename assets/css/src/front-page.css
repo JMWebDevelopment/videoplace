@@ -4,11 +4,31 @@
 @media (--small-up) {
 	#top-post {
 		background-color: rgba(var(--color-grey-rgb), .30);
-		margin-top: 15px;
+		max-width: 75rem;
+		width: 100%;
+		margin: 15px auto 0;
+		padding: 0;
+
+		& .post {
+			display: flex;
+			flex-wrap: wrap;
+
+			@supports ( grid-area: auto ) {
+				display: grid;
+				grid-column-gap: 0;
+				grid-template-columns: 2fr 1fr;
+				grid-template-rows: auto;
+			}
+		}
+
 		& .columns {
 			padding-left: 0;
 			&.video {
 				position: relative;
+				padding: 0 15px 0 0;
+				flex-basis: 66.67%;
+				overflow: hidden;
+
 				& .videoplace-featured-image {
 					position: absolute;
 					top: 0;
@@ -23,8 +43,10 @@
 			&.photo {
 				padding-left: 0;
 				padding-bottom: 36.7%;
+				padding-right: 15px;
 				position: relative;
 				overflow: hidden;
+				flex-basis: 66.67%;
 				& img {
 					position: absolute;
 					top: 0;
@@ -35,11 +57,15 @@
 			}
 			&.details {
 				padding: 10px;
+				flex-basis: 33.33%;
 				& .title {
 					@mixin robotoSlab 35px, 400, var(--color-white), none;
 					margin-left: 0;
+					font-size: 35px;
+					margin-top: 0;
 					& a {
-						color: $white;
+						color: var(--color-white);
+						text-decoration: none;
 					}
 				}
 				& .post-details {
@@ -49,23 +75,27 @@
 						border-radius: 50px;
 						float: left;
 						margin-right: 10px;
+						height: auto;
+						width: auto;
 					}
 					& .post-detail {
 						@mixin roboto 20px, 300, var(--color-white), none;
 						margin-top: -2px;
+						clear: none;
 						& a {
-							color: $white;
+							color: var(--color-white);
 						}
 					}
 				}
 				& p {
 					font-size: 16px;
-					margin-bottom: 10px;
+					margin-bottom: 1rem;
 				}
 				& .button.white {
 					font-size: 22px;
 					width: 100%;
 					padding: 5px 15px;
+					display: inline-block;
 				}
 			}
 			& .flex-video {
@@ -76,16 +106,29 @@
 	}
 	.home-posts-section {
 		border-top: 1px solid var(--color-white);
-		padding-top: 15px;
-		margin-top: 15px;
+		padding: 15px 0 0;
+		width: 100%;
+		margin: 15px auto 0;
+		max-width: 75rem;
+		display: flex;
+		flex-wrap: wrap;
+
+		@supports ( grid-area: auto ) {
+			display: grid;
+			grid-column-gap: 0;
+			grid-template-columns: 66.67% 33.33%;
+		}
+
 		& .home-posts {
 			padding-left: 0;
+			flex-basis: 66.67%;
 			& .video-post {
 				background-color: rgba(var(--color-grey-rgb), .30);
 				margin-bottom: 15px;
-				padding: 5px 10px 10px 10px;
+				padding: 5px 10px 2rem 10px;
 				& .post-category {
 					@mixin roboto 18px, 300, var(--color-white), uppercase;
+					margin: 5px;
 				}
 				& .photo-video {
 					position: relative;
@@ -121,10 +164,13 @@
 				}
 				& .post-details {
 					padding-bottom: 3px;
+					margin-bottom: 1rem;
 					& img {
 						border-radius: 50px;
 						float: left;
 						margin-right: 10px;
+						width: auto;
+						height: auto;
 					}
 					& .post-detail {
 						@mixin roboto 20px, 300, var(--color-white), none;
@@ -139,6 +185,11 @@
 					width: 100%;
 				}
 			}
+		}
+
+		& .primary-sidebar {
+			flex-basis: 33.33%;
+			padding: 0 15px;
 		}
 	}
 }
